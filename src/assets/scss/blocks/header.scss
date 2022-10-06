@@ -28,11 +28,11 @@
     }
 
     &__desc--del::before {
-      background-image: url('images/icons/icon-del-address.svg')
+      background-image: url('../../images/icons/icon-del-address.svg')
     }
 
     &__desc--tel::before {
-      background-image: url('@img/icons/icon-tel.svg')
+      background-image: url('../../images/icons/icon-tel.svg')
     }
 
     &__info {
