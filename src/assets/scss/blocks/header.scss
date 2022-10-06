@@ -1,0 +1,56 @@
+.header-top {
+  background-color: #31352B;
+
+    &__nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 14px 0;
+      text-transform: uppercase;
+    }
+
+    &__contacts {
+      display: flex;
+    }
+
+    &__item {
+      position: relative;
+      padding-left: 45px;
+      &::before {
+        content: " ";
+        position: absolute;
+        width: 32px;
+        height: 22px;
+        left: 0;
+        top: 0;
+        background-size: contain;
+        background-repeat: no-repeat;
+        }
+    }
+
+    &__desc--del::before {
+      background-image: url('images/icons/icon-del-address.svg')
+    }
+
+    &__desc--tel::before {
+      background-image: url('@img/icons/icon-tel.svg')
+    }
+
+    &__info {
+      display: flex;
+    }
+}
+
+.header-bottom {
+  background-color: #63A60F;
+
+  &__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 0;
+  }
+}
+
+.user-nav {
+  display: flex;
+}

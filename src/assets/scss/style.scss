@@ -1,15 +1,22 @@
 @import "vars";
-
 @import "fonts";
 @import "reset";
 @import "global";
 
 
 body {
-    background-color: black;
-    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    font-size: 21px;
+    background-color: $white;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
     color: $white;
+    letter-spacing: 0.03em;
+}
+
+.container {
+    max-width: 1260px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
 @import "media";
