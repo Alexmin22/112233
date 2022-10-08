@@ -9,10 +9,12 @@
       justify-content: space-between;
       align-items: center;
       text-transform: uppercase;
+      padding: 14px 0;
     }
 
     &__contacts {
       display: flex;
+      align-items: center;
     }
     
     &__item {
@@ -23,25 +25,49 @@
       }
 
       &:hover {
-        background-color: #abc2883b;
-        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 5%;
+        opacity: 0.7;
       }
 
       &:active {
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
-        background-color: #abc28811;
+        color: #E0EDCF;
       }
     }
     
     &__link {
       display: flex;
       align-items: flex-end;
-      padding: 14px 0;
+      padding: 12px 3px 12px 50px;
+      position: relative;
+
+      &::before {
+        content: " ";
+        position: absolute;
+        width: 35px;
+        height: 25px;
+        left: 0;
+        top: 20%;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      &--del {
+
+        &::before {
+          background-image: url('../../assets/images/icons/icon-del-address.svg');
+        }
+      }
+
+      &--tel {
+
+        &::before {
+          background-image: url('../../assets/images/icons/icon-tel.svg');
+        }
+      }
       
       &:focus {
-        background-color: #88c288a8;
-        box-shadow: 0 0 9px rgba(0, 0, 0, 0.25);
+        background-color: rgba(255, 255, 255, 0.0001);
+        box-shadow: 0px 0px 0px 3px #EFF6E7;
+        border-radius: 3px;
       }
     }
     
@@ -57,18 +83,25 @@
     }
     
     &__element {
-      padding: 1px 0;
+      padding: 12px 3px;
       transition: background-color 0.3s, box-shadow 0.3s;
 
       &:hover {
-        background-color: #abc2883b;
-        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 5%;
+        opacity: 0.7;
       }
 
       &:active {
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
-        background-color: #abc28811;
+        color: #E0EDCF;
+      }
+    }
+
+    &__detail {
+      padding: 12px 3px;
+      
+      &:focus {
+        background-color: rgba(255, 255, 255, 0.0001);
+        box-shadow: 0px 0px 0px 3px #EFF6E7;
+        border-radius: 3px;
       }
     }
 
@@ -117,8 +150,8 @@
 
     &__numb {
       position: absolute;
-      top: -9px;
-      left: -6px;
+      top: 1px;
+      left: 5px;
       width: 18px;
       height: 18px;
       border-radius: 50%;
