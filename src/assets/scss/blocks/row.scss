@@ -1,0 +1,41 @@
+.row {
+  max-width: 580px;
+  display: flex;
+
+  &__input {
+    font-family: inherit;
+    height: 50px;
+    color: $black;
+    width: 420px;
+    border-radius: 6px 0 0 6px;
+    border: 0;
+    background-image: url("../images/icons/search.svg");
+    background-repeat: no-repeat;
+    background-position: 13px center;
+    padding-left: 50px;
+    transition: background-color 0.3s, color 0.4s;
+
+    &:focus {
+      outline: 0;
+      background-color: rgb(200, 255, 205);
+    }
+    
+    &:hover {
+      background-color: rgba(253 253 253 / 60%);
+      color: #131313;
+    }
+  }
+}
+
+.btn {
+  padding: 15px 50px;
+  background-color: $black;
+  text-transform: uppercase;
+  border-radius: 0 6px 6px 0;
+  transition: color 0.3s, background-color 0.3s;
+
+  &:hover {
+    background-color: #131313;
+    color: rgba(253 253 253 / 60%);
+  }
+}

@@ -4,53 +4,126 @@
     &__nav {
       display: flex;
       justify-content: space-between;
-      padding: 14px 0;
+      align-items: center;
       text-transform: uppercase;
     }
 
     &__contacts {
       display: flex;
     }
-
+    
     &__item {
-      position: relative;
-      padding-left: 45px;
-      &::before {
-        content: " ";
-        position: absolute;
-        width: 32px;
-        height: 22px;
-        left: 0;
-        top: 0;
-        background-size: contain;
-        background-repeat: no-repeat;
-        }
-    }
+      transition: background-color 0.3s, box-shadow 0.3s;
 
-    &__desc--del::before {
-      background-image: url('../../images/icons/icon-del-address.svg')
-    }
+      &:not(:last-child) {
+        margin-right: 45px;
+      }
 
-    &__desc--tel::before {
-      background-image: url('../../images/icons/icon-tel.svg')
+      &:hover {
+        background-color: #abc2883b;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 5%;
+      }
+
+      &:active {
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+        background-color: #abc28811;
+      }
+    }
+    
+    &__link {
+      display: flex;
+      align-items: flex-end;
+      padding: 14px 0;
+      
+            &:focus {
+              background-color: #88c288a8;
+              box-shadow: 0 0 9px rgba(0, 0, 0, 0.25);
+            }
+    }
+    
+    &__img {
+      margin-right: 12px;
     }
 
     &__info {
       display: flex;
+      justify-content: space-between;
+      max-width: 235px;
+      width: 100%;
+    }
+    
+    &__element {
+      padding: 1px 0;
+      transition: background-color 0.3s, box-shadow 0.3s;
+
+      &:hover {
+        background-color: #abc2883b;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 5%;
+      }
+
+      &:active {
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+        background-color: #abc28811;
+      }
     }
 }
 
 .header-bottom {
-  background-color: #63A60F;
+  background-color: $green;
 
   &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  &__left {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 25px 0;
-  }
+  flex-basis: 83%;
+  padding: 23px 0;
 }
 
-.user-nav {
+&__right {
   display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 12%;
+  }
+
+  &__link {
+  position: relative;
+  padding: 10px;
+  transition: box-shadow 0.3s;
+    
+    &:hover {
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    &:active {
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+    }
+      
+    &:focus {
+      box-shadow: 0px 0px 20px rgb(255 255 255 / 85%);
+      background-color: #abc28873;
+    }
+  }
+
+  &__numb {
+    position: absolute;
+    top: -9px;
+    left: -6px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: $white;
+    color: #CF3E3B;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 18px;
+    text-align: center;
+  }
 }

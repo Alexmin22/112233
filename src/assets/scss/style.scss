@@ -3,25 +3,32 @@
 @import "reset";
 @import "global";
 
+// font-family: 'Ruda', sans-serif;
 
 body {
-    background-color: $white;
-    font-family: "Open Sans", sans-serif;
-    font-size: 14px;
-    line-height: 1.4;
-    color: $white;
-    letter-spacing: 0.03em;
+  background-color: $white;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  color: $white;
+  letter-spacing: 0.03em;
 }
 
 .container {
-    max-width: 1260px;
-    margin: 0 auto;
-    padding: 0 15px;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
+
+
+
+
 @import "media";
-    // Blocks
+// Blocks
 @import "blocks/container";
 @import "blocks/header";
+@import "blocks/catalogue";
+@import "blocks/row";
 @import "blocks/main";
 @import "blocks/footer";

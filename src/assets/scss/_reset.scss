@@ -49,6 +49,10 @@ textarea {
   cursor: pointer;
 }
 
+:focus {
+  outline: 0;
+}
+
 button {
   color: inherit;
   padding: 0;
