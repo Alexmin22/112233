@@ -1,5 +1,8 @@
-.header-top {
-  background-color: #31352B;
+  .header {
+
+    &__top {
+    background-color: #31352B;
+    }
 
     &__nav {
       display: flex;
@@ -36,10 +39,10 @@
       align-items: flex-end;
       padding: 14px 0;
       
-            &:focus {
-              background-color: #88c288a8;
-              box-shadow: 0 0 9px rgba(0, 0, 0, 0.25);
-            }
+      &:focus {
+        background-color: #88c288a8;
+        box-shadow: 0 0 9px rgba(0, 0, 0, 0.25);
+      }
     }
     
     &__img {
@@ -68,62 +71,62 @@
         background-color: #abc28811;
       }
     }
-}
 
-.header-bottom {
-  background-color: $green;
+    &__bottom {
+      background-color: $green;
+    }
 
-  &__wrapper {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  &__left {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-basis: 83%;
-  padding: 23px 0;
-}
-
-&__right {
-  display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-basis: 12%;
-  }
-
-  &__link {
-  position: relative;
-  padding: 10px;
-  transition: box-shadow 0.3s;
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
     
-    &:hover {
-      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    &__left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-basis: 83%;
+    padding: 23px 0;
+  }
+
+  &__right {
+    display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-basis: 12%;
     }
 
-    &:active {
-      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
-    }
+    &__user {
+    position: relative;
+    padding: 10px;
+    transition: box-shadow 0.3s;
       
-    &:focus {
-      box-shadow: 0px 0px 20px rgb(255 255 255 / 85%);
-      background-color: #abc28873;
-    }
-  }
+      &:hover {
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      }
 
-  &__numb {
-    position: absolute;
-    top: -9px;
-    left: -6px;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    background-color: $white;
-    color: #CF3E3B;
-    font-weight: 600;
-    font-size: 10px;
-    line-height: 18px;
-    text-align: center;
-  }
+      &:active {
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+      }
+        
+      &:focus {
+        box-shadow: 0px 0px 20px rgb(255 255 255 / 85%);
+        background-color: #abc28873;
+      }
+    }
+
+    &__numb {
+      position: absolute;
+      top: -9px;
+      left: -6px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background-color: $white;
+      color: #CF3E3B;
+      font-weight: 600;
+      font-size: 10px;
+      line-height: 18px;
+      text-align: center;
+    }
 }
