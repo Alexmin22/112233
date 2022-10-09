@@ -36,33 +36,7 @@
     &__link {
       display: flex;
       align-items: flex-end;
-      padding: 12px 3px 12px 50px;
-      position: relative;
-
-      &::before {
-        content: " ";
-        position: absolute;
-        width: 35px;
-        height: 25px;
-        left: 0;
-        top: 20%;
-        background-size: contain;
-        background-repeat: no-repeat;
-      }
-
-      &--del {
-
-        &::before {
-          background-image: url('../../assets/images/icons/icon-del-address.svg');
-        }
-      }
-
-      &--tel {
-
-        &::before {
-          background-image: url('../../assets/images/icons/icon-tel.svg');
-        }
-      }
+      padding: 12px 3px;
       
       &:focus {
         background-color: rgba(255, 255, 255, 0.0001);
@@ -70,11 +44,11 @@
         border-radius: 3px;
       }
     }
-    
-    &__img {
-      margin-right: 12px;
-    }
 
+    &__span {
+      margin-left: 12px;
+    }
+    
     &__info {
       display: flex;
       justify-content: space-between;
@@ -162,4 +136,8 @@
       line-height: 18px;
       text-align: center;
     }
+}
+
+.sprite {
+  fill: $white;
 }
