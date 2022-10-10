@@ -9,5 +9,3 @@ $(document).ready(function() {
         $('.sprite--chevron').toggleClass('sprite--up');
     });
 });
-
-console.log('file 1');
