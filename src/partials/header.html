@@ -6,17 +6,18 @@
           <li class="header__item">
 
             <a class="header__link header__link--del" href="#">
+
               <svg class="sprite" width="32" height="23">
                 <use href="../assets/images/sprite.svg#del"></use>
               </svg>
+
               <span class="header__span">адрес и время доставки</span>
             </a>
-
           </li>
 
           <li class="header__item">
-
             <a href="#" class="header__link header__link--tel">
+
               <svg class="sprite" width="23" height="23">
                 <use href="../assets/images/sprite.svg#tel"></use>
               </svg>
@@ -50,13 +51,24 @@
 
           <a class="logo" href="#">
 
-            <img class="logo__img" src="../assets/images/logo.svg" alt="Freshok" width="200">
-
+            <img
+              class="logo__img"
+              src="../assets/images/logo.svg"
+              alt="Freshok"
+              width="200"
+            />
           </a>
 
-          <button class="catalogue catalogue--up">
-            <div class="catalogue__subnav">
-              <ul class="catalogue__list">
+<div class="catalogue">
+          <button class="catalogue__btn btn--up" type="button" id="catalogue">Каталог продуктов
+
+            <svg class="sprite sprite--chevron" width="20" height="10">
+              <use href="../assets/images/sprite.svg#chevron"></use>
+            </svg>
+
+          </button>
+              <ul class="catalogue__subnav" id="menu">
+
                 <li class="catalogue__item">
                   <a class="catalogue__link" href="#">Овощи и фрукты</a>
                 </li>
@@ -103,53 +115,54 @@
                 <li class="catalogue__item">
                   <a class="catalogue__link" href="#">Чай, кофе</a>
                 </li>
-              </ul>
-            </div>
-          </button>
+              </ul></div>
 
-          <form class="row" action="/" method="post">
-            <label class="row__label">
-              <span class="sr-only"></span>
+          <form class="search-row" action="/" method="post">
+            <label class="search-row__label">
+              <span class="sr-only">поисковая строка</span>
 
               <input
-                class="row__input"
-                type="text"
+                class="search-row__input"
+                type="search"
                 name="search"
                 placeholder="Найти в магазине ..."
                 required
               />
             </label>
 
-            <button class="btn">поиск</button>
+            <button class="btn" type="button">поиск</button>
           </form>
         </div>
 
-        <div class="header__right">
-          <a class="header__user" href="#">
+        <ul class="header__right">
+          <li class="header__list">
+            <a class="header__user" href="#">
+              <svg class="sprite sprite--user" width="25" height="32">
+                <use href="../assets/images/sprite.svg#user"></use>
+              </svg>
+            </a>
+          </li>
 
-            <svg class="sprite" width="25" height="32">
-              <use href="../assets/images/sprite.svg#user"></use>
-            </svg>
-          </a>
+          <li class="header__list">
+            <a class="header__user" href="#">
+              <svg class="sprite sprite--user" width="32" height="29">
+                <use href="../assets/images/sprite.svg#heart"></use>
+              </svg>
 
-          <a class="header__user" href="#">
-            
-            <svg class="sprite" width="32" height="29">
-              <use href="../assets/images/sprite.svg#heart"></use>
-            </svg>
+              <span class="header__numb">12</span>
+            </a>
+          </li>
 
-            <span class="header__numb">12</span>
-          </a>
+          <li class="header__list">
+            <a class="header__user" href="#">
+              <svg class="sprite sprite--user" width="32" height="31">
+                <use href="../assets/images/sprite.svg#cart"></use>
+              </svg>
 
-          <a class="header__user" href="#">
-            
-            <svg class="sprite" width="32" height="31">
-              <use href="../assets/images/sprite.svg#cart"></use>
-            </svg>
-
-            <span class="header__numb">12</span>
-          </a>
-        </div>
+              <span class="header__numb">12</span>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   </div>

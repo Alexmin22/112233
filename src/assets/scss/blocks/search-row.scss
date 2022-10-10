@@ -1,4 +1,4 @@
-.row {
+.search-row {
   max-width: 580px;
   display: flex;
 
@@ -15,14 +15,8 @@
     padding-left: 50px;
     transition: background-color 0.3s, color 0.4s;
 
-    &:focus {
-      outline: 0;
-      background-color: rgb(200, 255, 205);
-    }
-    
-    &:hover {
-      background-color: rgba(253 253 253 / 60%);
-      color: #131313;
+    &::placeholder {
+      color: $black;
     }
   }
 }
@@ -32,10 +26,19 @@
   background-color: $black;
   text-transform: uppercase;
   border-radius: 0 6px 6px 0;
-  transition: color 0.3s, background-color 0.3s;
+  transition: background-color 0.3s, border-radius 0.3s, box-shadow 0.3s;
 
   &:hover {
-    background-color: #131313;
-    color: rgba(253 253 253 / 60%);
+    background-color: rgba(49, 53, 43, 0.85);
+    border-radius: 0px 6px 6px 0px;
+  }
+
+  &:active {
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  &:focus {
+    outline-color: #b1d286;
   }
 }

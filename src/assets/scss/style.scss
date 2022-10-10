@@ -2,33 +2,22 @@
 @import "fonts";
 @import "reset";
 @import "global";
+@import "mixins";
 
-// font-family: 'Ruda', sans-serif;
+@include font("OpenSans", OpenSans-Light, 300);
+@include font("OpenSans", OpenSans-Regular, 400);
+@include font("OpenSans", OpenSans-SemiBold, 600);
+@include font("Ruda", Ruda-Regular, 400);
+@include font("Ruda", Ruda-SemiBold, 600);
+@include font("Ruda", Ruda-Bold, 700);
+@include font("Ruda", Ruda-Black, 900);
 
-body {
-  background-color: $white;
-  font-family: "Open Sans", sans-serif;
-  font-size: 14px;
-  line-height: 1.4;
-  color: $white;
-  letter-spacing: 0.03em;
-}
-
-.container {
-  max-width: 1320px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
-
-
-
-
-@import "media";
 // Blocks
 @import "blocks/container";
 @import "blocks/header";
 @import "blocks/catalogue";
-@import "blocks/row";
+@import "blocks/search-row";
 @import "blocks/main";
 @import "blocks/footer";
+
+@import "media";
