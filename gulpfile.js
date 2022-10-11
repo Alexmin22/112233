@@ -137,7 +137,7 @@ function cssWatch(cb) {
 }
 
 function js(cb) {
-    return src(path.src.js, {base: srcPath + 'assets/js/'})
+    return src(path.src.js, {base: srcPath + "assets/js/"})
         .pipe(plumber({
             errorHandler : function(err) {
                 notify.onError({

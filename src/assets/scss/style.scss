@@ -13,11 +13,11 @@
 @include font("Ruda", Ruda-Black, 900);
 
 // Blocks
-@import "blocks/container";
 @import "blocks/header";
 @import "blocks/catalogue";
 @import "blocks/search-row";
 @import "blocks/main";
 @import "blocks/footer";
+
 
 @import "media";
