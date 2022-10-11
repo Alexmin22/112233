@@ -1,7 +1,25 @@
-$white: #fff;
+$white: #ffffff;
 $white-cf: #e0edcf;
 $white-e7: #eff6e7;
 $gray: #626262;
+$gray-50: #505050;
 $black: #31352b;
 $dark: #121212;
 $green: #63a60f;
+$red-3b: #CF3E3B;
+
+
+
+
+
+
+@mixin title () {
+  
+  font-family: 'Ruda';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 1.3;  
+  text-transform: uppercase;
+  color: $gray-50;
+}
