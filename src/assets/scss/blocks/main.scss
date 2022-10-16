@@ -11,7 +11,6 @@
   color: $red-3b;
 }
 
-
 // ***************slider*************************
 
 .slick-track {
@@ -33,8 +32,8 @@
     height: 600px;
 
     &--crt {
-    background: url("../images/slider/carrots.jpg") center no-repeat;
-    background-size: cover;
+      background: url("../images/slider/carrots.jpg") center no-repeat;
+      background-size: cover;
     }
 
     &--tom {
@@ -46,7 +45,7 @@
       background: url("../images/slider/veg.jpg") center no-repeat;
       background-size: cover;
     }
-}
+  }
 
   &__offer {
     display: flex;
@@ -83,7 +82,7 @@
     text-transform: capitalize;
 
     &:hover {
-      background-color: #4D800C;
+      background-color: #4d800c;
       border-radius: 3px;
     }
 
@@ -123,7 +122,7 @@
   }
 
   &:active {
-    background-color: #F3F3F2;
+    background-color: #f3f3f2;
   }
 
   &::before {
@@ -142,7 +141,6 @@
   background-color: $white;
   border-radius: 6px;
 
-
   &:focus {
     box-shadow: 0px 0px 0px 3px rgba(99, 166, 14, 0.5);
     outline: 0;
@@ -159,13 +157,11 @@
   }
 }
 
-
-
 // ****************benefits***********************
 
 .benefits {
   background-color: $white-f6;
-  
+
   &__list {
     display: flex;
     justify-content: center;
@@ -186,35 +182,34 @@
     }
 
     &--del::after {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       top: 0;
       width: 50px;
       height: 50px;
-      background-image: url('../images/icons/moto.svg');
+      background-image: url("../images/icons/moto.svg");
     }
 
     &--pay::after {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       top: 0;
       width: 50px;
       height: 50px;
-      background-image: url('../images/icons/pay.svg');
+      background-image: url("../images/icons/pay.svg");
     }
 
     &--sup::after {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       top: 0;
       width: 50px;
       height: 50px;
-      background-image: url('../images/icons/support.svg');
+      background-image: url("../images/icons/support.svg");
     }
-
   }
 
   &__title {
@@ -236,25 +231,25 @@
   display: flex;
   justify-content: center;
   margin-bottom: 45px;
-  
-      &__btn {
-      font-weight: 700;
-      font-size: 15px;
-      text-transform: uppercase;
-      border-bottom: 3px solid transparent;
 
-      &:hover {
-        color: $green;
-      }
+  &__btn {
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: uppercase;
+    border-bottom: 3px solid transparent;
 
-      &:focus {
-        outline-color: $gray-50;
-      }
+    &:hover {
+      color: $green;
+    }
 
-      &:active {
-        border-bottom: 3px solid darken($white-e7,15%);
-      }
-      }
+    &:focus {
+      outline-color: $gray-50;
+    }
+
+    &:active {
+      border-bottom: 3px solid darken($white-e7, 15%);
+    }
+  }
 
   &__item {
     &:not(:last-child) {
@@ -263,11 +258,9 @@
   }
 }
 
-
 // GOODS******************************
 
 .goods {
-
   &__item {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -311,31 +304,31 @@
       display: none;
     }
   }
-  
+
   &__wrap {
-  display: flex;
+    display: flex;
   }
 
-    &__img {
-      display: inline;
-      margin: 12px 0 12px 12px;
-      object-fit: cover;
+  &__img {
+    display: inline;
+    margin: 12px 0 12px 12px;
+    object-fit: cover;
   }
 
-    &__info {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      margin: 12px;
-      max-width: 165px;
-      width: 100%;
-      position: relative;
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 12px;
+    max-width: 165px;
+    width: 100%;
+    position: relative;
 
-      p {
-        font-weight: 600;
-      }
+    p {
+      font-weight: 600;
+    }
   }
-  
+
   &__rate {
     position: absolute;
     bottom: 0;
@@ -353,96 +346,92 @@
     display: inline-block;
   }
 
-    &__stock {
+  &__stock {
+    position: absolute;
+    top: -10px;
+    left: 2px;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 1;
+
+    &--many {
+      color: $green;
+    }
+
+    &--out {
+      color: $red-3b;
+    }
+
+    &--end {
+      color: $gray-c1;
+    }
+  }
+
+  &__newprice {
+    display: inline;
+    margin-right: 12px;
+  }
+
+  &__prices {
+    position: relative;
+  }
+
+  &__oldprice {
+    color: $gray;
+    font-size: 12px;
+    line-height: 1;
+    position: relative;
+
+    &::before {
+      content: "";
       position: absolute;
-      top: -10px;
-      left: 2px;
-      font-weight: 600;
-      font-size: 10px;
-      line-height: 1;
-      
-        &--many {
-          color: $green;
-        }
-
-        &--out {
-          color: $red-3b;
-        }
-
-        &--end {
-          color: $gray-c1;
-        }
+      border-bottom: 1px solid $gray;
+      width: 95%;
+      height: 60%;
+      transform: rotate(-10deg);
     }
-    
-    &__newprice {
-      display: inline;
-      margin-right: 12px;
-    }
-    
+  }
 
-    &__prices {
-      position: relative;
+  &__btn {
+    color: $white;
+    background-color: $green;
+    text-align: center;
+    text-transform: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 18px;
+    line-height: 1.3;
+    width: 180px;
+    margin: 50px auto 0;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #4d800c;
+      border-radius: 3px;
     }
 
-    &__oldprice {
-      color: $gray;
-      font-size: 12px;
-      line-height: 1;
-      position: relative;
-
-      &::before {
-        content: '';
-        position: absolute;
-        border-bottom: 1px solid $gray;
-        width: 95%;
-        height: 60%;
-        transform: rotate(-10deg);
-      }
+    &:focus {
+      border-radius: 3px;
+      outline-color: $white-e5;
     }
 
-    &__btn {
-      color: $white;
-      background-color: $green;
-      text-align: center;
-      text-transform: none;
-      padding: 12px 24px;
-      border-radius: 6px;
-      font-size: 18px;
-      line-height: 1.3;
-      width: 180px;
-      margin: 50px auto 0;
-      cursor: pointer;
-
-
-      &:hover {
-        background-color: #4D800C;
-        border-radius: 3px;
-      }
-
-      &:focus {
-        border-radius: 3px;
-        outline-color: $white-e5;
-      }
-
-      &:active {
-        border-radius: 3px;
-        outline: 0;
-      }
+    &:active {
+      border-radius: 3px;
+      outline: 0;
+    }
   }
 }
-
-
 
 // NEWS*******************************
 
 .brands {
   padding: 72px 0;
-  
+
   &__inner {
     display: flex;
     justify-content: space-around;
   }
-  
+
   &__link {
     opacity: 0.5;
 
@@ -453,7 +442,6 @@
 }
 
 .news {
-
   &__top {
     display: flex;
     justify-content: space-between;

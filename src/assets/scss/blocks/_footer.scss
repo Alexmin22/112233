@@ -6,9 +6,9 @@
   }
 
   &__info {
-    border-bottom: 1px solid darken($white,70%);
+    border-bottom: 1px solid darken($white, 70%);
   }
-  
+
   &__wrap {
     display: flex;
     justify-content: space-between;
@@ -33,7 +33,7 @@
     border: 0;
 
     &:hover {
-      background: #4D800C;
+      background: #4d800c;
       border-radius: 0px 6px 6px 0px;
     }
 
@@ -57,17 +57,14 @@
   &__copy {
     padding: 25px 0;
   }
-  
+
   &__inner {
     display: flex;
     justify-content: space-between;
-
   }
-
 }
 
 .navlist {
-
   &__box {
     display: flex;
   }
@@ -76,7 +73,7 @@
     margin-right: 75px;
     padding: 20px 5px;
   }
-  
+
   &__link {
     white-space: nowrap;
     padding: 5px;
