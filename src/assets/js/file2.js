@@ -11,10 +11,15 @@ $(document).ready(function() {
     $('.catalogue__btn').on('click', function(){
         $('.sprite--chevron').toggleClass('sprite--up');
     });
+    
+    $(function(){ 
+      var mixer = mixitup('.goods__item');
+    });
 });
 
+
 $(function () {
- 
+  
   $(".goods__star").rateYo({
     rating: 3.6,
     ratedFill: "#FFB800",

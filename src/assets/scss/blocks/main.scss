@@ -235,12 +235,25 @@
 .filter {
   display: flex;
   justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 45px;
   
       &__btn {
       font-weight: 700;
       font-size: 15px;
       text-transform: uppercase;
+      border-bottom: 3px solid transparent;
+
+      &:hover {
+        color: $green;
+      }
+
+      &:focus {
+        outline-color: $gray-50;
+      }
+
+      &:active {
+        border-bottom: 3px solid darken($white-e7,15%);
+      }
       }
 
   &__item {

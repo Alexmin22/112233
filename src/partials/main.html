@@ -78,22 +78,22 @@
 
       <ul class="filter">
         <li class="filter__item">
-          <button class="filter__btn">все товары</button>
+          <button class="filter__btn" type="button" data-filter="all">все товары</button>
         </li>
 
         <li class="filter__item">
-          <button class="filter__btn">новинки</button>
+          <button class="filter__btn" type="button" data-filter=".category-a">новинки</button>
         </li>
 
         <li class="filter__item">
-          <button class="filter__btn">хиты</button>
+          <button class="filter__btn" type="button" data-filter=".category-b">хиты</button>
         </li>
       </ul>
 
       <div class="goods">
         <ul class="goods__item">
 
-          <li class="goods__card">
+          <li class="goods__card mix category-a">
             <span class="goods__card--new">новинка</span>
             <a class="goods__link-img" href="#">
               <div class="goods__wrap">
@@ -116,8 +116,8 @@
 
                     <span class="goods__stock goods__stock--many">в наличии</span>
 
-                    <div class="goods__newprice">499₽</div>
-                    <span class="goods__oldprice">599 ₽</span>
+                    <div class="goods__newprice">99₽</div>
+                    <span class="goods__oldprice">1999 ₽</span>
 
                   </div>
                 </div>
@@ -125,7 +125,7 @@
             >
           </li>
 
-          <li class="goods__card">
+          <li class="goods__card mix category-a">
             <span class="goods__card--new">новинка</span>
             <a class="goods__link-img" href="#">
               <div class="goods__wrap">
@@ -148,8 +148,8 @@
 
                     <span class="goods__stock goods__stock--out">заканчивается</span>
 
-                    <div class="goods__newprice">499₽</div>
-                    <span class="goods__oldprice">599 ₽</span>
+                    <div class="goods__newprice">777₽</div>
+                    <span class="goods__oldprice">877 ₽</span>
 
                   </div>
                 </div>
@@ -157,7 +157,7 @@
             >
           </li>
 
-          <li class="goods__card">
+          <li class="goods__card mix category-a">
             <span class="goods__card--new">новинка</span>
             <a class="goods__link-img" href="#">
               <div class="goods__wrap">
@@ -180,8 +180,8 @@
 
                     <span class="goods__stock goods__stock--end">нет наличии</span>
 
-                    <div class="goods__newprice">499₽</div>
-                    <span class="goods__oldprice">599 ₽</span>
+                    <div class="goods__newprice">440₽</div>
+                    <span class="goods__oldprice">600 ₽</span>
 
                   </div>
                 </div>
@@ -189,9 +189,9 @@
             >
           </li>
 
-          <li class="goods__card">
+          <li class="goods__card mix category-a">
             <span class="goods__card--new">новинка</span>
-            <a class="goods__link-img" href="#">
+            <a class="goods__link-img" data-fancybox="gallery" href="#">
               <div class="goods__wrap">
                 <img
                   class="goods__img"
@@ -212,8 +212,8 @@
 
                     <span class="goods__stock goods__stock--many">в наличии</span>
 
-                    <div class="goods__newprice">499₽</div>
-                    <span class="goods__oldprice">599 ₽</span>
+                    <div class="goods__newprice">660₽</div>
+                    <span class="goods__oldprice">960 ₽</span>
 
                   </div>
                 </div>
@@ -221,9 +221,9 @@
             >
           </li>
 
-          <li class="goods__card">
+          <li class="goods__card mix category-a">
             <span class="goods__card--new">новинка</span>
-            <a class="goods__link-img" href="#">
+            <a class="goods__link-img" data-fancybox="gallery" href="#">
               <div class="goods__wrap">
                 <img
                   class="goods__img"
@@ -245,8 +245,8 @@
 
                     <span class="goods__stock goods__stock--many">в наличии</span>
 
-                    <div class="goods__newprice">499₽</div>
-                    <span class="goods__oldprice">599 ₽</span>
+                    <div class="goods__newprice">99₽</div>
+                    <span class="goods__oldprice">1199 ₽</span>
 
                   </div>
                 </div>
@@ -254,9 +254,9 @@
             >
           </li>
 
-          <li class="goods__card">
+          <li class="goods__card mix category-b">
             <span class="goods__card--hit">хит</span>
-            <a class="goods__link-img" href="#">
+            <a class="goods__link-img" data-fancybox="gallery" href="#">
               <div class="goods__wrap">
                 <img
                   class="goods__img"
@@ -278,8 +278,8 @@
                     <span class="goods__stock goods__stock--out"
                       >заканчивается</span
                     >
-                    <div class="goods__newprice">499₽</div>
-                    <span class="goods__oldprice">599 ₽</span>
+                    <div class="goods__newprice">180₽</div>
+                    <span class="goods__oldprice">230 ₽</span>
 
                   </div>
                 </div>
@@ -287,9 +287,9 @@
             >
           </li>
 
-          <li class="goods__card">
+          <li class="goods__card mix category-c">
             <span class="goods__card--not">хит</span>
-            <a class="goods__link-img" href="#">
+            <a class="goods__link-img" data-fancybox="gallery" href="#">
               <div class="goods__wrap">
                 <img
                   class="goods__img"
@@ -310,8 +310,8 @@
 
                     <span class="goods__stock goods__stock--many">в наличии</span>
 
-                    <div class="goods__newprice">499₽</div>
-                    <span class="goods__oldprice">599 ₽</span>
+                    <div class="goods__newprice">990₽</div>
+                    <span class="goods__oldprice">5990 ₽</span>
 
                   </div>
                 </div>
@@ -319,9 +319,9 @@
             >
           </li>
 
-          <li class="goods__card">
+          <li class="goods__card mix category-b">
             <span class="goods__card--hit">хит</span>
-            <a class="goods__link-img" href="#">
+            <a class="goods__link-img" data-fancybox="gallery" href="#">
               <div class="goods__wrap">
                 <img
                   class="goods__img"
@@ -409,7 +409,7 @@
 
           <h2 class="caption news__caption">наши новости</h2>
           <a class="news__more" href="#">все новости</a>
-          
+
         </div>
       </div>
     </div>
