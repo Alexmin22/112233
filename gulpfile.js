@@ -28,21 +28,24 @@ const path = {
         js:     distPath + "assets/js/",
         css:    distPath + "assets/css/",
         images: distPath + "assets/images/",
-        fonts:  distPath + "assets/fonts/"
+        fonts:  distPath + "assets/fonts/",
+        jslib:  distPath + "assets/lib/"
     },
     src: {
         html:   srcPath + "*.html",
-        js:     srcPath + "assets/js/**/*.js",
+        js:     srcPath + "assets/js/*.js",
         css:    srcPath + "assets/scss/*.scss",
         images: srcPath + "assets/images/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
-        fonts:  srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}"
+        fonts:  srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}",
+        jslib:  srcPath + "assets/lib/*.js"
     },
     watch: {
         html:   srcPath + "**/*.html",
-        js:     srcPath + "assets/js/**/*.js",
+        js:     srcPath + "assets/js/*.js",
         css:    srcPath + "assets/scss/**/*.scss",
         images: srcPath + "assets/images/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}",
-        fonts:  srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}"
+        fonts:  srcPath + "assets/fonts/**/*.{eot,woff,woff2,ttf,svg}",
+        jslib:  srcPath + "assets/lib/*.js"
     },
     clean: "./" + distPath
 }
@@ -190,6 +193,15 @@ function images(cb) {
     cb();
 }
 
+function jslib(cb) {
+    return src(path.src.jslib)
+        .pipe(dest(path.build.jslib))
+        .pipe(browserSync.reload({stream: true}));
+
+    cb();
+}
+
+
 function fonts(cb) {
     return src(path.src.fonts)
         .pipe(dest(path.build.fonts))
@@ -210,9 +222,10 @@ function watchFiles() {
     gulp.watch([path.watch.js], jsWatch);
     gulp.watch([path.watch.images], images);
     gulp.watch([path.watch.fonts], fonts);
+    gulp.watch([path.watch.jslib], jslib);
 }
 
-const build = gulp.series(clean, gulp.parallel(html, css, js, images, fonts));
+const build = gulp.series(clean, gulp.parallel(html, css, js, images, fonts, jslib));
 const watch = gulp.parallel(build, watchFiles, serve);
 
 
@@ -223,6 +236,7 @@ exports.css = css;
 exports.js = js;
 exports.images = images;
 exports.fonts = fonts;
+exports.jslib = jslib;
 exports.clean = clean;
 exports.build = build;
 exports.watch = watch;

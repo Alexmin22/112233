@@ -3,6 +3,8 @@
 @import "reset";
 @import "global";
 @import "mixins";
+@import "../../../node_modules/rateyo/src/jquery.rateyo";
+
 
 @include font("OpenSans", OpenSans-Light, 300);
 @include font("OpenSans", OpenSans-Regular, 400);

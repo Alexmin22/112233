@@ -9,12 +9,23 @@ body {
   letter-spacing: 0.03em;
 }
 
+main {
+  color: $black;
+}
+
 .container {
   max-width: 1320px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
-main {
-  height: 3000px;
+.caption {
+  font-family: 'Ruda';
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1.4;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  color: $dark;
 }

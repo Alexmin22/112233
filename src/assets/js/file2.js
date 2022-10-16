@@ -13,3 +13,14 @@ $(document).ready(function() {
     });
 });
 
+$(function () {
+ 
+  $(".goods__star").rateYo({
+    rating: 3.6,
+    ratedFill: "#FFB800",
+    maxValue: 5,
+    numStars: 1,
+    readOnly: true,
+    starWidth: "16px"
+  });
+});
