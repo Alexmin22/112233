@@ -1,0 +1,22 @@
+.sprite {
+  fill: $white;
+
+  &--chevron {
+    padding-left: 12px;
+    fill: $green;
+  }
+  &--up {
+    padding-right: 12px;
+    padding-left: 0;
+    transform: rotate(180deg);
+  }
+
+  &--fav {
+    fill: $gray-c1;
+    
+  }
+
+  &--visa {
+    margin-right: 25px;
+  }
+}

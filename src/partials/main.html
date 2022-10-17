@@ -71,6 +71,73 @@
   </div>
 </section>
 
+<section class="top-goods">
+  <div class="top-goods__inner">
+    <div class="container">
+      <h2 class="caption">топовые товары</h2>
+
+      <ul class="filter">
+        <li class="filter__item">
+          <button class="filter__btn" type="button" data-filter="all">все товары</button>
+        </li>
+
+        <li class="filter__item">
+          <button class="filter__btn" type="button" data-filter=".category-a">фрукты</button>
+        </li>
+
+        <li class="filter__item">
+          <button class="filter__btn" type="button" data-filter=".category-b">овощи</button>
+        </li>
+
+        <li class="filter__item">
+          <button class="filter__btn" type="button" data-filter=".category-c">напитки</button>
+        </li>
+
+        <li class="filter__item">
+          <button class="filter__btn" type="button" data-filter=".category-d">бакалея</button>
+        </li>
+      </ul>
+
+      <ul class="top-goods__item">
+
+        <li class="goods__card mix category-a">
+
+          <div class="goods__promo">
+          <span class="goods__card--new">новинка</span>
+          <span class="goods__card--sale">-50%</span>
+          </div>
+
+          <a class="top-goods__link" href="#">
+            <svg class="sprite sprite--fav" width="32" height="29">
+              <use href="../assets/images/sprite.svg#fav"></use>
+            </svg>
+          </a>
+
+          <a class="goods__link-img" href="#">
+            <div class="top-goods__wrap">
+              <img
+                class="top-goods__img"
+                src="../assets//images/goods/pineapple.jpg"
+                alt="Ананас"
+                width="300",
+                height="225"
+              />
+              <div class="goods__info">
+                
+                <p class="top-goods__text">Ананас, 1 кг</p>
+
+                <div class="goods__prices">
+                  <span class="goods__oldprice top-goods__oldprice">1999 ₽</span>
+                  <div class="top-goods__newprice">99₽</div>
+                </div>
+              </div>
+            </div>
+            </a>
+        </li>
+
+  </div>
+</section>
+
 <section class="products">
   <div class="products__inner">
     <div class="container">
@@ -94,7 +161,11 @@
         <ul class="goods__item">
 
           <li class="goods__card mix category-a">
-            <span class="goods__card--new">новинка</span>
+
+            <div class="goods__promo">
+              <span class="goods__card--new">новинка</span>
+            </div>
+
             <a class="goods__link-img" href="#">
               <div class="goods__wrap">
                 <img
@@ -126,7 +197,11 @@
           </li>
 
           <li class="goods__card mix category-a">
-            <span class="goods__card--new">новинка</span>
+
+            <div class="goods__promo">
+              <span class="goods__card--new">новинка</span>
+            </div>
+
             <a class="goods__link-img" href="#">
               <div class="goods__wrap">
                 <img
@@ -150,15 +225,18 @@
 
                     <div class="goods__newprice">777₽</div>
                     <span class="goods__oldprice">877 ₽</span>
-
                   </div>
                 </div>
-              </div></a
-            >
+              </div>
+            </a>
           </li>
 
           <li class="goods__card mix category-a">
-            <span class="goods__card--new">новинка</span>
+
+            <div class="goods__promo">
+              <span class="goods__card--new">новинка</span>
+            </div>
+
             <a class="goods__link-img" href="#">
               <div class="goods__wrap">
                 <img
@@ -182,15 +260,18 @@
 
                     <div class="goods__newprice">440₽</div>
                     <span class="goods__oldprice">600 ₽</span>
-
                   </div>
                 </div>
-              </div></a
-            >
+              </div>
+              </a>
           </li>
 
           <li class="goods__card mix category-a">
-            <span class="goods__card--new">новинка</span>
+
+            <div class="goods__promo">
+              <span class="goods__card--new">новинка</span>
+            </div>
+
             <a class="goods__link-img" data-fancybox="gallery" href="#">
               <div class="goods__wrap">
                 <img
@@ -214,15 +295,18 @@
 
                     <div class="goods__newprice">660₽</div>
                     <span class="goods__oldprice">960 ₽</span>
-
                   </div>
                 </div>
-              </div></a
-            >
+              </div>
+              </a>
           </li>
 
           <li class="goods__card mix category-a">
-            <span class="goods__card--new">новинка</span>
+
+            <div class="goods__promo">
+              <span class="goods__card--new">новинка</span>
+            </div>
+
             <a class="goods__link-img" data-fancybox="gallery" href="#">
               <div class="goods__wrap">
                 <img
@@ -247,20 +331,23 @@
 
                     <div class="goods__newprice">99₽</div>
                     <span class="goods__oldprice">1199 ₽</span>
-
                   </div>
                 </div>
-              </div></a
-            >
+              </div>
+              </a>
           </li>
 
           <li class="goods__card mix category-b">
-            <span class="goods__card--hit">хит</span>
+
+            <div class="goods__promo">
+              <span class="goods__card--hit">хит</span>
+            </div>
+
             <a class="goods__link-img" data-fancybox="gallery" href="#">
               <div class="goods__wrap">
                 <img
                   class="goods__img"
-                  src="../assets//images/goods/juice.jpg"
+                  src="../assets//images/goods/veg_juice .jpg"
                   alt="Сок"
                   width="100"
                   ,
@@ -280,15 +367,18 @@
                     >
                     <div class="goods__newprice">180₽</div>
                     <span class="goods__oldprice">230 ₽</span>
-
                   </div>
                 </div>
-              </div></a
-            >
+              </div>
+              </a>
           </li>
 
           <li class="goods__card mix category-c">
-            <span class="goods__card--not">хит</span>
+
+            <div class="goods__promo">
+              <span class="goods__card--hit">хит</span>
+            </div>
+
             <a class="goods__link-img" data-fancybox="gallery" href="#">
               <div class="goods__wrap">
                 <img
@@ -312,15 +402,18 @@
 
                     <div class="goods__newprice">3990₽</div>
                     <span class="goods__oldprice">5990 ₽</span>
-
                   </div>
                 </div>
-              </div></a
-            >
+              </div>
+              </a>
           </li>
 
           <li class="goods__card mix category-b">
-            <span class="goods__card--hit">хит</span>
+
+            <div class="goods__promo">
+              <span class="goods__card--hit">хит</span>
+            </div>
+
             <a class="goods__link-img" data-fancybox="gallery" href="#">
               <div class="goods__wrap">
                 <img
@@ -344,11 +437,10 @@
 
                     <div class="goods__newprice">499₽</div>
                     <span class="goods__oldprice">599 ₽</span>
-
                   </div>
                 </div>
-              </div></a
-            >
+              </div>
+              </a>
           </li>
         </ul>
       </div>
