@@ -1,6 +1,17 @@
 .search-row {
   max-width: 580px;
   display: flex;
+  position: relative;
+
+  &__decore {
+    position: absolute;
+    top: 16px;
+    left: 13px;
+
+    & svg {
+      fill: $dark;
+    }
+  }
 
   &__input {
     font-family: inherit;
@@ -9,10 +20,8 @@
     width: 420px;
     border-radius: 6px 0 0 6px;
     border: 0;
-    background-image: url("../images/icons/search.svg");
-    background-repeat: no-repeat;
-    background-position: 13px center;
     padding-left: 50px;
+    padding-right: 30px;
     transition: background-color 0.3s, color 0.4s;
 
     &::placeholder {
@@ -22,7 +31,7 @@
 }
 
 .btn {
-  padding: 15px 50px;
+  padding: 15px 55px;
   background-color: $black;
   text-transform: uppercase;
   border-radius: 0 6px 6px 0;
@@ -30,11 +39,11 @@
 
   &:hover {
     background-color: rgba(49, 53, 43, 0.85);
-    border-radius: 0px 6px 6px 0px;
+    border-radius: 0 6px 6px 0;
   }
 
   &:active {
-    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
     color: rgba(255, 255, 255, 0.5);
   }
 

@@ -1,11 +1,12 @@
+@import "../../../node_modules/rateyo/src/jquery.rateyo";
+@import "../../../node_modules/swiper/swiper-bundle.min";
+@import "reset";
 @import "vars";
 @import "fonts";
-@import "reset";
 @import "mixins";
-@import "../../../node_modules/rateyo/src/jquery.rateyo";
 
 
-@include font("OpenSans", OpenSans-Light, 300);
+//@include font("OpenSans", OpenSans-Light, 300); комментирую, т.к эти шрифты пока не применены в макете
 @include font("OpenSans", OpenSans-Regular, 400);
 @include font("OpenSans", OpenSans-SemiBold, 600);
 @include font("Ruda", Ruda-Regular, 400);
@@ -20,6 +21,3 @@
 @import "blocks/sprite";
 @import "blocks/main";
 @import "blocks/footer";
-
-
-@import "media";
