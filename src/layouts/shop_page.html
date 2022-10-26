@@ -1,39 +1,896 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
+  <head>
     {{> head }}
-</head>
-<body>
-
+  </head>
+  <body>
     {{> header }}
 
     <main>
-        
       <section class="top">
         <div class="container">
           <div class="breadcrumbs">
-            <div class="breadcrumbs__list">
+            <ul class="breadcrumbs__list">
               <li class="breadcrumbs__item">
                 <a class="breadcrumbs__link" href="#">Главная</a>
               </li>
               <li class="breadcrumbs__item">
                 <a class="breadcrumbs__link" href="#">Каталог товаров</a>
               </li>
-            </div>
+            </ul>
           </div>
         </div>
       </section>
 
+      <section class="top-goods range">
+        <div class="container">
+          <aside class="aside">
+            <ul class="aside__list">
+              <li class="aside__item">
+                <h3 class="range__caption aside__caption">Категории</h3>
+
+                <ul class="inner">
+                  <li class="inner__item">
+                    <button class="inner__btn" type="button">Овощи и фрукты</button>
+                  </li>
+                  <li class="inner__item">
+                    <button class="inner__btn" type="button">Бакалея</button>
+                  </li>
+                  <li class="inner__item">
+                    <button class="inner__btn" type="button">Молочные продукты</button>
+                  </li>
+                  <li class="inner__item">
+                    <button class="inner__btn" type="button">Хлеб</button>
+                  </li>
+                  <li class="inner__item">
+                    <button class="inner__btn" type="button">Мясо</button>
+                  </li>
+                  <li class="inner__item">
+                    <button class="inner__btn" type="button">Колбаса</button>
+                  </li>
+                  <li class="inner__item">
+                    <button class="inner__btn" type="button">Рыба</button>
+                  </li>
+                  <li class="inner__item">
+                    <button class="inner__btn" type="button">Алкоголь</button>
+                  </li>
+                </ul>
+              </li>
+
+                <li class="aside__item">
+                  <h3 class="range__caption aside__caption">Предложения</h3>
+  
+                  <ul class="inner">
+                    <li class="inner__item">
+                      <form class="inner__form" action="#">
+                        <span class="inner__text">Со скидкой</span>
+                        <div class="inner__box">
+                          <input class="inner__input" type="checkbox">
+                          <span class="inner__checkbox"></span>
+                        </div>
+                      </form>
+                      
+                    </li>
+                    <li class="inner__item">
+                       Новинка
+                    </li>
+                    <li class="inner__item">
+                       Хит
+                    </li>
+                  </ul>
+                </li>
+
+                <li class="aside__item">
+                  <h3 class="range__caption aside__caption">Бренд</h3>
+  
+                  <ul class="inner">
+                    <li class="inner__item">
+                      <button class="inner__btn" type="button">CocaCola</button>
+                    </li>
+                    <li class="inner__item">
+                      <button class="inner__btn" type="button">Pepsi</button>
+                    </li>
+                    <li class="inner__item">
+                      <button class="inner__btn" type="button">Sprite</button>
+                    </li>
+                    <li class="inner__item">
+                      <button class="inner__btn" type="button">Fanta</button>
+                    </li>
+                    <li class="inner__item">
+                      <button class="inner__btn" type="button">RedBull</button>
+                    </li>
+                    <li class="inner__item">
+                      <button class="inner__btn" type="button">Dr Pepper</button>
+                    </li>
+                  </ul>
+                </li>
+
+
+              <li class="aside__item">
+                <h3 class="range__caption aside__caption">Цена</h3>
+                <form class="aside__form" action="/">
+
+                  <div class="aside__fromto">
+                    <label><span>от</span><input class="aside__from" type="text"><span>₽</span></label>
+                    <label><span>до</span><input class="aside__from aside__to" type="text"><span>₽</span></label>
+                  </div>
+
+                <input
+                  class="aside__input"
+                  type="text"
+                  name="my_range"
+                  data-type="double"
+                  data-min="0"
+                  data-max="1300"
+                  data-from="100"
+                  data-to="1000"
+                />
+              </form>
+              </li>
+            </ul>
+          </aside>
+
+          <h2 class="range__caption">Каталог товаров</h2>
+
+          <div data-ref="container-1">
+            <ul class="filter">
+              <li class="filter__item">
+                <button class="filter__btn" type="button" data-filter="all">
+                  все товары
+                </button>
+              </li>
+
+              <li class="filter__item">
+                <button
+                  class="filter__btn"
+                  type="button"
+                  data-filter=".category-a"
+                >
+                  фрукты
+                </button>
+              </li>
+
+              <li class="filter__item">
+                <button
+                  class="filter__btn"
+                  type="button"
+                  data-filter=".category-b"
+                >
+                  овощи
+                </button>
+              </li>
+
+              <li class="filter__item">
+                <button
+                  class="filter__btn"
+                  type="button"
+                  data-filter=".category-c"
+                >
+                  напитки
+                </button>
+              </li>
+
+              <li class="filter__item">
+                <button
+                  class="filter__btn"
+                  type="button"
+                  data-filter=".category-d"
+                >
+                  бакалея
+                </button>
+              </li>
+            </ul>
+
+            <ul class="goods top-goods__item">
+              <li class="goods__card mix category-a">
+                <article>
+                  <div class="promo">
+                    <span class="promo--new">новинка</span>
+                    <span class="promo--sale">-50%</span>
+                  </div>
+
+                  <a class="top-goods__link" href="#">
+                    <div class="sr-only">добавить в избранное</div>
+                    <svg class="sprite sprite--fav" width="32" height="29">
+                      <use href="assets/images/sprite.svg#fav"></use>
+                    </svg>
+                  </a>
+
+                  <a class="goods__link-img" href="#">
+                    <div class="sr-only">карточка товара</div>
+                    <div class="top-goods__wrap">
+                      <a class="goods__zoom" href="#">
+                        <div class="sr-only">увеличить картинку товара</div>
+                        <svg class="sprite" width="21" height="20">
+                          <use href="assets/images/sprite.svg#search"></use>
+                        </svg>
+                      </a>
+
+                      <img
+                        class="top-goods__img"
+                        src="assets//images/goods/raspberry.png"
+                        alt="Ананас"
+                        width="300"
+                        ,
+                        height="225"
+                      />
+                      <div class="goods__info top-goods__info">
+                        <h3 class="goods__title">Ананас, 1 кг</h3>
+
+                        <div class="goods__prices">
+                          <span class="goods__oldprice top-goods__oldprice"
+                            >1999 ₽</span
+                          >
+                          <div class="top-goods__newprice">99₽</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <form class="counter top-goods__form" action="/">
+                      <div class="counter__amount top-goods__amount">
+                        <button
+                          class="counter__minus"
+                          type="button"
+                          onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();"
+                        >
+                          -
+                        </button>
+                        <input
+                          class="counter__input"
+                          type="number"
+                          name="/"
+                          value="1"
+                          min="1"
+                          max="99"
+                          step="1"
+                        />
+                        <button
+                          class="counter__plus"
+                          type="button"
+                          onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();"
+                        >
+                          +
+                        </button>
+                      </div>
+
+                      <button class="user top-goods__cart" type="button">
+                        <svg class="sprite sprite--user" width="16" height="16">
+                          <use href="assets/images/sprite.svg#cart"></use>
+                        </svg>
+                      </button>
+                    </form>
+                  </a>
+                </article>
+              </li>
+
+              <li class="goods__card mix category-b">
+                <article>
+                  <div class="promo"></div>
+
+                  <a class="top-goods__link" href="#">
+                    <div class="sr-only">добавить в избранное</div>
+                    <svg class="sprite sprite--fav" width="32" height="29">
+                      <use href="assets/images/sprite.svg#fav"></use>
+                    </svg>
+                  </a>
+
+                  <a class="goods__link-img" href="#">
+                    <div class="sr-only">карточка товара</div>
+                    <div class="top-goods__wrap">
+                      <a class="goods__zoom" href="#">
+                        <div class="sr-only">увеличить картинку товара</div>
+                        <svg class="sprite" width="21" height="20">
+                          <use href="assets/images/sprite.svg#search"></use>
+                        </svg>
+                      </a>
+
+                      <img
+                        class="top-goods__img"
+                        src="assets//images/goods/raspberry.png"
+                        alt="Лимон"
+                        width="300"
+                        ,
+                        height="225"
+                      />
+                      <div class="goods__info">
+                        <h3 class="goods__title">Лимон, 1 кг</h3>
+
+                        <div class="goods__prices">
+                          <span
+                            class="goods__oldprice top-goods__oldprice"
+                          ></span>
+                          <div class="top-goods__newprice">199₽</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <form class="counter top-goods__form" action="/">
+                      <div class="counter__amount top-goods__amount">
+                        <button
+                          class="counter__minus"
+                          type="button"
+                          onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();"
+                        >
+                          -
+                        </button>
+                        <input
+                          class="counter__input"
+                          type="number"
+                          name="/"
+                          value="1"
+                          min="0"
+                          max="99"
+                          step="1"
+                        />
+                        <button
+                          class="counter__plus"
+                          type="button"
+                          onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();"
+                        >
+                          +
+                        </button>
+                      </div>
+
+                      <button class="user top-goods__cart" type="button">
+                        <svg class="sprite sprite--user" width="16" height="16">
+                          <use href="assets/images/sprite.svg#cart"></use>
+                        </svg>
+                      </button>
+                    </form>
+                  </a>
+                </article>
+              </li>
+
+              <li class="goods__card mix category-c">
+                <article>
+                  <div class="promo">
+                    <span class="promo--hit">хит</span>
+                  </div>
+
+                  <a class="top-goods__link" href="#">
+                    <div class="sr-only">добавить в избранное</div>
+                    <svg class="sprite sprite--fav" width="32" height="29">
+                      <use href="assets/images/sprite.svg#fav"></use>
+                    </svg>
+                  </a>
+
+                  <a class="goods__link-img" href="#">
+                    <div class="sr-only">карточка товара</div>
+                    <div class="top-goods__wrap">
+                      <a class="goods__zoom" href="#">
+                        <div class="sr-only">увеличить картинку товара</div>
+                        <svg class="sprite" width="21" height="20">
+                          <use href="assets/images/sprite.svg#search"></use>
+                        </svg>
+                      </a>
+
+                      <img
+                        class="top-goods__img"
+                        src="assets//images/goods/raspberry.png"
+                        alt="Питахайя"
+                        width="300"
+                        ,
+                        height="225"
+                      />
+                      <div class="goods__info">
+                        <h3 class="goods__title">
+                          Питахайя красная с белой мякотью, 1шт
+                        </h3>
+
+                        <div class="goods__prices">
+                          <span
+                            class="goods__oldprice top-goods__oldprice"
+                          ></span>
+                          <div class="top-goods__newprice">1019₽</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <form class="counter top-goods__form" action="/">
+                      <div class="counter__amount top-goods__amount">
+                        <button
+                          class="counter__minus"
+                          type="button"
+                          onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();"
+                        >
+                          -
+                        </button>
+                        <input
+                          class="counter__input"
+                          type="number"
+                          name="/"
+                          value="1"
+                          min="0"
+                          max="99"
+                          step="1"
+                        />
+                        <button
+                          class="counter__plus"
+                          type="button"
+                          onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();"
+                        >
+                          +
+                        </button>
+                      </div>
+
+                      <button class="user top-goods__cart" type="button">
+                        <svg class="sprite sprite--user" width="16" height="16">
+                          <use href="assets/images/sprite.svg#cart"></use>
+                        </svg>
+                      </button>
+                    </form>
+                  </a>
+                </article>
+              </li>
+
+              <li class="goods__card mix category-d">
+                <article>
+                  <div class="promo"></div>
+
+                  <a class="top-goods__link" href="#">
+                    <div class="sr-only">добавить в избранное</div>
+                    <svg class="sprite sprite--fav" width="32" height="29">
+                      <use href="assets/images/sprite.svg#fav"></use>
+                    </svg>
+                  </a>
+
+                  <a class="goods__link-img" href="#">
+                    <div class="sr-only">карточка товара</div>
+                    <div class="top-goods__wrap">
+                      <a class="goods__zoom" href="#">
+                        <div class="sr-only">увеличить картинку товара</div>
+                        <svg class="sprite" width="21" height="20">
+                          <use href="assets/images/sprite.svg#search"></use>
+                        </svg>
+                      </a>
+
+                      <img
+                        class="top-goods__img"
+                        src="assets//images/goods/raspberry.png"
+                        alt="Кетчуп"
+                        width="300"
+                        ,
+                        height="225"
+                      />
+                      <div class="goods__info">
+                        <h3 class="goods__title">
+                          Кетчуп томатный детский органический Bio-Zentrale
+                          500мл, 1 шт
+                        </h3>
+
+                        <div class="goods__prices">
+                          <span
+                            class="goods__oldprice top-goods__oldprice"
+                          ></span>
+                          <div class="top-goods__newprice">600₽</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <form class="counter top-goods__form" action="/">
+                      <div class="counter__amount top-goods__amount">
+                        <button
+                          class="counter__minus"
+                          type="button"
+                          onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();"
+                        >
+                          -
+                        </button>
+                        <input
+                          class="counter__input"
+                          type="number"
+                          name="/"
+                          value="1"
+                          min="0"
+                          max="99"
+                          step="1"
+                        />
+                        <button
+                          class="counter__plus"
+                          type="button"
+                          onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();"
+                        >
+                          +
+                        </button>
+                      </div>
+
+                      <button
+                        class="user top-goods__cart"
+                        type="button"
+                        onclick="plus_modifier_count_product();"
+                      >
+                        <svg class="sprite sprite--user" width="16" height="16">
+                          <use href="assets/images/sprite.svg#cart"></use>
+                        </svg>
+                      </button>
+                    </form>
+                  </a>
+                </article>
+              </li>
+
+              <li class="goods__card mix category-a">
+                <article>
+                  <div class="promo">
+                    <span class="promo--hit">хит</span>
+                  </div>
+
+                  <a class="top-goods__link" href="#">
+                    <div class="sr-only">добавить в избранное</div>
+                    <svg class="sprite sprite--fav" width="32" height="29">
+                      <use href="assets/images/sprite.svg#fav"></use>
+                    </svg>
+                  </a>
+
+                  <a class="goods__link-img" href="#">
+                    <div class="sr-only">карточка товара</div>
+                    <div class="top-goods__wrap">
+                      <a class="goods__zoom" href="#">
+                        <div class="sr-only">увеличить картинку товара</div>
+                        <svg class="sprite" width="21" height="20">
+                          <use href="assets/images/sprite.svg#search"></use>
+                        </svg>
+                      </a>
+
+                      <img
+                        class="top-goods__img"
+                        src="assets//images/goods/raspberry.png"
+                        alt="Морковь"
+                        width="300"
+                        ,
+                        height="225"
+                      />
+                      <div class="goods__info">
+                        <h3 class="goods__title">
+                          Морковь молодая с бабушкиной грядки, 1кг
+                        </h3>
+
+                        <div class="goods__prices">
+                          <span
+                            class="goods__oldprice top-goods__oldprice"
+                          ></span>
+                          <div class="top-goods__newprice">49₽</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <form class="counter top-goods__form" action="/">
+                      <div class="counter__amount top-goods__amount">
+                        <button
+                          class="counter__minus"
+                          type="button"
+                          onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();"
+                        >
+                          -
+                        </button>
+                        <input
+                          class="counter__input"
+                          type="number"
+                          name="/"
+                          value="1"
+                          min="1"
+                          max="99"
+                          step="1"
+                        />
+                        <button
+                          class="counter__plus"
+                          type="button"
+                          onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();"
+                        >
+                          +
+                        </button>
+                      </div>
+
+                      <button class="user top-goods__cart" type="button">
+                        <svg class="sprite sprite--user" width="16" height="16">
+                          <use href="assets/images/sprite.svg#cart"></use>
+                        </svg>
+                      </button>
+                    </form>
+                  </a>
+                </article>
+              </li>
+
+              <li class="goods__card mix category-b">
+                <article>
+                  <div class="promo">
+                    <span class="promo--sale">-30%</span>
+                  </div>
+
+                  <a class="top-goods__link" href="#">
+                    <div class="sr-only">добавить в избранное</div>
+                    <svg class="sprite sprite--fav" width="32" height="29">
+                      <use href="assets/images/sprite.svg#fav"></use>
+                    </svg>
+                  </a>
+
+                  <a class="goods__link-img" href="#">
+                    <div class="sr-only">карточка товара</div>
+                    <div class="top-goods__wrap">
+                      <a class="goods__zoom" href="#">
+                        <div class="sr-only">увеличить картинку товара</div>
+                        <svg class="sprite" width="21" height="20">
+                          <use href="assets/images/sprite.svg#search"></use>
+                        </svg>
+                      </a>
+
+                      <img
+                        class="top-goods__img"
+                        src="assets//images/goods/raspberry.png"
+                        alt="Напиток"
+                        width="300"
+                        ,
+                        height="225"
+                      />
+                      <div class="goods__info">
+                        <h3 class="goods__title">
+                          Напиток сокосодержащий Sanpellegrino Aranciata Orange
+                          Красный апельсин безалкогольный
+                        </h3>
+
+                        <div class="goods__prices">
+                          <span class="goods__oldprice top-goods__oldprice"
+                            >299 ₽</span
+                          >
+                          <div class="top-goods__newprice">199₽</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <form class="counter top-goods__form" action="/">
+                      <div class="counter__amount top-goods__amount">
+                        <button
+                          class="counter__minus"
+                          type="button"
+                          onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();"
+                        >
+                          -
+                        </button>
+                        <input
+                          class="counter__input"
+                          type="number"
+                          name="/"
+                          value="1"
+                          min="1"
+                          max="99"
+                          step="1"
+                        />
+                        <button
+                          class="counter__plus"
+                          type="button"
+                          onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();"
+                        >
+                          +
+                        </button>
+                      </div>
+
+                      <button class="user top-goods__cart" type="button">
+                        <svg class="sprite sprite--user" width="16" height="16">
+                          <use href="assets/images/sprite.svg#cart"></use>
+                        </svg>
+                      </button>
+                    </form>
+                  </a>
+                </article>
+              </li>
+
+              <li class="goods__card mix category-c">
+                <article>
+                  <div class="promo">
+                    <span class="promo--new">новинка</span>
+                  </div>
+
+                  <a class="top-goods__link" href="#">
+                    <div class="sr-only">добавить в избранное</div>
+                    <svg class="sprite sprite--fav" width="32" height="29">
+                      <use href="assets/images/sprite.svg#fav"></use>
+                    </svg>
+                  </a>
+
+                  <a class="goods__link-img" href="#">
+                    <div class="sr-only">карточка товара</div>
+                    <div class="top-goods__wrap">
+                      <a class="goods__zoom" href="#">
+                        <div class="sr-only">добавить в избранное</div>
+                        <svg class="sprite" width="21" height="20">
+                          <use href="assets/images/sprite.svg#search"></use>
+                        </svg>
+                      </a>
+
+                      <img
+                        class="top-goods__img"
+                        src="assets//images/goods/raspberry.png"
+                        alt="Кофе"
+                        width="300"
+                        ,
+                        height="225"
+                      />
+                      <div class="goods__info">
+                        <h3 class="goods__title">
+                          Кофе с коноплей органический Caffé Salomoni 250г
+                        </h3>
+
+                        <div class="goods__prices">
+                          <span
+                            class="goods__oldprice top-goods__oldprice"
+                          ></span>
+                          <div class="top-goods__newprice">877₽</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <form class="counter top-goods__form" action="/">
+                      <div class="counter__amount top-goods__amount">
+                        <button
+                          class="counter__minus"
+                          type="button"
+                          onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();"
+                        >
+                          -
+                        </button>
+                        <input
+                          class="counter__input"
+                          type="number"
+                          name="/"
+                          value="1"
+                          min="1"
+                          max="99"
+                          step="1"
+                        />
+                        <button
+                          class="counter__plus"
+                          type="button"
+                          onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();"
+                        >
+                          +
+                        </button>
+                      </div>
+
+                      <button class="user top-goods__cart" type="button">
+                        <svg class="sprite sprite--user" width="16" height="16">
+                          <use href="assets/images/sprite.svg#cart"></use>
+                        </svg>
+                      </button>
+                    </form>
+                  </a>
+                </article>
+              </li>
+
+              <li class="goods__card mix category-d">
+                <article>
+                  <div class="promo">
+                    <span class="promo--new">новинка</span>
+                  </div>
+
+                  <a class="top-goods__link" href="#">
+                    <div class="sr-only">добавить в избранное</div>
+                    <svg class="sprite sprite--fav" width="32" height="29">
+                      <use href="assets/images/sprite.svg#fav"></use>
+                    </svg>
+                  </a>
+
+                  <a class="goods__link-img" href="#">
+                    <div class="sr-only">карточка товара</div>
+                    <div class="top-goods__wrap">
+                      <a class="goods__zoom" href="#">
+                        <div class="sr-only">увеличить картинку</div>
+                        <svg class="sprite" width="21" height="20">
+                          <use href="assets/images/sprite.svg#search"></use>
+                        </svg>
+                      </a>
+
+                      <img
+                        class="top-goods__img"
+                        src="assets//images/goods/raspberry.png"
+                        alt="Перец"
+                        width="300"
+                        ,
+                        height="225"
+                      />
+                      <div class="goods__info">
+                        <h3 class="goods__title">Перец оранжевый, 1кг</h3>
+
+                        <div class="goods__prices">
+                          <span
+                            class="goods__oldprice top-goods__oldprice"
+                          ></span>
+                          <div class="top-goods__newprice">349₽</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <form class="counter top-goods__form" action="/">
+                      <div class="counter__amount top-goods__amount">
+                        <button
+                          class="counter__minus"
+                          type="button"
+                          onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();"
+                        >
+                          -
+                        </button>
+                        <input
+                          class="counter__input"
+                          type="number"
+                          name="/"
+                          value="1"
+                          min="1"
+                          max="99"
+                          step="1"
+                        />
+                        <button
+                          class="counter__plus"
+                          type="button"
+                          onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();"
+                        >
+                          +
+                        </button>
+                      </div>
+
+                      <button class="user top-goods__cart" type="button">
+                        <svg class="sprite sprite--user" width="16" height="16">
+                          <use href="assets/images/sprite.svg#cart"></use>
+                        </svg>
+                      </button>
+                    </form>
+                  </a>
+                </article>
+              </li>
+            </ul>
+          </div>
+
+          <div class="btn-small range__btn">
+            <button class="btn small__btn range__button">Показать еще</button>
+          </div>
+        </div>
+      </section>
+
+      <div class="benefits">
+        <div class="container">
+          <ul class="benefits__list">
+            <li class="benefits__item">
+              <svg class="sprite" width="50" height="50">
+                <use href="assets/images/sprite.svg#moto"></use>
+              </svg>
+
+              <div class="benefits__desc">
+                <div class="benefits__title">Бесплатная доставка</div>
+                <span>Для заказов на сумму от 500 ₽</span>
+              </div>
+            </li>
+
+            <li class="benefits__item">
+              <svg class="sprite" width="50" height="50">
+                <use href="assets/images/sprite.svg#pay"></use>
+              </svg>
+
+              <div class="benefits__desc">
+                <div class="benefits__title">Возврат товара</div>
+                <span>Если товары были испорчены</span>
+              </div>
+            </li>
+
+            <li class="benefits__item">
+              <svg class="sprite" width="50" height="50">
+                <use href="assets/images/sprite.svg#sup"></use>
+              </svg>
+
+              <div class="benefits__desc">
+                <div class="benefits__title">Поддержка 24/7</div>
+                <span>Лучшие операторы</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
     </main>
 
-
     {{> footer }}
-    
+
     <script src="assets/lib/jquery-3.6.1.min.js"></script>
     <script src="assets/lib/mixitup.min.js"></script>
     <script src="assets/lib/slick.min.js"></script>
+    <script src="assets/lib/jquery.rateyo.min.js"></script>
     <script src="assets/lib/swiper-bundle.min.js"></script>
+    <script src="assets/lib/ion.rangeSlider.min.js"></script>
     <script src="assets/js/app.js"></script>
-    
-</body>
+  </body>
 </html>

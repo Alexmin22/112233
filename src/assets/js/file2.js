@@ -60,3 +60,78 @@ new Swiper('.swiper', {
   spaceBetween: 30,
   freeMode: true
 });
+
+$('.user-cart').on('click', function(){
+  $('.buy').addClass('buy--active')
+});
+
+$('.buy__close').on('click', function(){
+  $('.buy--active').removeClass('buy--active')
+});
+
+
+
+var $range = $(".aside__input");
+    var $inputFrom = $(".aside__from");
+    var $inputTo = $(".aside__to");
+    var instance;
+    var min = 0;
+    var max = 1000;
+    var from = 0;
+    var to = 0;
+    
+    $range.ionRangeSlider({
+        skin: "round",
+        type: "double",
+        min: min,
+        max: max,
+        from: 200,
+        to: 800,
+        onStart: updateInputs,
+        onChange: updateInputs,
+        onFinish: updateInputs
+    });
+    instance = $range.data("ionRangeSlider");
+    
+    function updateInputs (data) {
+        from = data.from;
+        to = data.to;
+    
+        $inputFrom.prop("value", from);
+        $inputTo.prop("value", to);
+    }
+    
+    $inputFrom.on("change", function () {
+        var val = $(this).prop("value");
+    
+        // validate
+        if (val < min) {
+            val = min;
+        } else if (val > to) {
+            val = to;
+        }
+    
+        instance.update({
+            from: val
+        });
+    
+        $(this).prop("value", val);
+    
+    });
+    
+    $inputTo.on("change", function () {
+        var val = $(this).prop("value");
+    
+        // validate
+        if (val < from) {
+            val = from;
+        } else if (val > max) {
+            val = max;
+        }
+    
+        instance.update({
+            to: val
+        });
+    
+        $(this).prop("value", val);
+    });

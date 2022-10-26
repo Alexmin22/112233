@@ -87,10 +87,27 @@
                 <use href="assets/images/sprite.svg#remove"></use>
               </svg>
             </div>
+            <div class="buy__wrap">
+            <img class="buy__img" src="assets/images/goods/pineapple.jpg" alt="ананас" width="60", height="60">
+            <div class="buy__desc">
+              <h4 class="buy__caption">Ананас, 1 кг</h4>
+              <div class="buy__price">999<span>₽</span></div>
+            </div>
+          </div>
+
+          <div class="buy__numbers">
+            <form class="counter buy__counter" action="/">
+              <div class="counter__amount">
+              <button class="counter__minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
+            <input class="counter__input" type="number" name="/" value="1" min="1" max="99" step="1">
+            <button class="counter__plus" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
+              </div>
+            </form>
+          </div>
             </li>
           </ul>
           <div class="buy__total"></div>
-          <button class="buy__btn" type="submit">Оформить заказ</button>
+          <button class="btn buy__btn" type="submit">Оформить заказ</button>
         </div>
 
 
@@ -221,7 +238,7 @@
           </li>
 
           <li class="header__list">
-            <button class="user" type="button">
+            <button class="user user-cart" type="button">
 
               <svg class="sprite sprite--user" width="32" height="31">
                 <use href="assets/images/sprite.svg#cart"></use>

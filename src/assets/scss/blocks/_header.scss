@@ -151,6 +151,7 @@
 }
 
 .buy {
+  display: none;
   position: absolute;
   top: 0;
   right: 0;
@@ -159,6 +160,13 @@
   background-color: $white;
   color: $dark;
   z-index: 50;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+  
+  &--active {
+    display: flex;
+  }
 
   &__top {
     display: flex;
@@ -185,6 +193,7 @@
 
   &__list {
     background-color: $white-f6;
+    flex-grow: 1;
   }
 
   &__item {
@@ -251,5 +260,18 @@
 
   &__counter {
     margin-right: 12px;
+  }
+
+  &__btn {
+    width: 100%;
+    border-radius: 0;
+    color: $white;
+    background-color: $green;
+    font-size: 18px;
+    text-transform: none;
+
+    &:hover {
+      background-color: $green-0c;
+    }
   }
 }

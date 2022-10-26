@@ -1,5 +1,6 @@
 @import "../../../node_modules/rateyo/src/jquery.rateyo";
 @import "../../../node_modules/swiper/swiper-bundle.min";
+@import "../../../node_modules/ion-rangeslider/css/ion.rangeSlider.min";
 @import "reset";
 @import "vars";
 @import "fonts";
@@ -15,9 +16,9 @@
 @include font("Ruda", Ruda-Black, 900);
 
 // Blocks
+@import "blocks/search-row";
 @import "blocks/header";
 @import "blocks/catalogue";
-@import "blocks/search-row";
 @import "blocks/sprite";
 @import "blocks/main";
 @import "blocks/footer";
