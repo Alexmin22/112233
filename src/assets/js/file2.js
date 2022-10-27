@@ -32,7 +32,7 @@ $(function() {
 
 $(function(){
   $('.top-goods__cart').on('click', function(){
-      $('.top-goods__amount').addClass('top-goods__amount--active');
+      $(this.parentElement).addClass('top-goods__form--active');
   });
 });
 
@@ -134,4 +134,13 @@ var $range = $(".aside__input");
         });
     
         $(this).prop("value", val);
+    });
+
+
+      $(function() {
+        $('.shop__sort').styler();
+      }, 100);
+
+      $('.shop__btn').on('click', function(){
+        $(this).toggleClass('shop__btn--active');
     });

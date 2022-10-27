@@ -22,8 +22,11 @@
         </div>
       </section>
 
-      <section class="top-goods range">
+      <section class="shop">
         <div class="container">
+          <h2 class="range__caption">Каталог товаров</h2>
+          <div class="shop__wrap">
+
           <aside class="aside">
             <ul class="aside__list">
               <li class="aside__item">
@@ -59,49 +62,122 @@
 
                 <li class="aside__item">
                   <h3 class="range__caption aside__caption">Предложения</h3>
-  
+
                   <ul class="inner">
                     <li class="inner__item">
                       <form class="inner__form" action="#">
+                        <label class="inner__label">
+                        <input class="inner__input" type="checkbox">
+                        <span class="inner__checkbox"></span>
                         <span class="inner__text">Со скидкой</span>
                         <div class="inner__box">
-                          <input class="inner__input" type="checkbox">
-                          <span class="inner__checkbox"></span>
                         </div>
+                      </label>
                       </form>
-                      
                     </li>
+
                     <li class="inner__item">
-                       Новинка
+                      <form class="inner__form" action="#">
+                        <label class="inner__label">
+                        <input class="inner__input" type="checkbox">
+                        <span class="inner__checkbox"></span>
+                        <span class="inner__text">Новинка</span>
+                        <div class="inner__box">
+                        </div>
+                      </label>
+                      </form>
                     </li>
+
                     <li class="inner__item">
-                       Хит
+                      <form class="inner__form" action="#">
+                        <label class="inner__label">
+                        <input class="inner__input" type="checkbox">
+                        <span class="inner__checkbox"></span>
+                        <span class="inner__text">Хит</span>
+                        <div class="inner__box">
+                        </div>
+                      </label>
+                      </form>
                     </li>
                   </ul>
                 </li>
 
                 <li class="aside__item">
                   <h3 class="range__caption aside__caption">Бренд</h3>
-  
+
                   <ul class="inner">
                     <li class="inner__item">
-                      <button class="inner__btn" type="button">CocaCola</button>
+                      <form class="inner__form" action="#">
+                        <label class="inner__label">
+                        <input class="inner__input" type="checkbox">
+                        <span class="inner__checkbox"></span>
+                        <span class="inner__text">CocaCola</span>
+                        <div class="inner__box">
+                        </div>
+                      </label>
+                      </form>
                     </li>
+
                     <li class="inner__item">
-                      <button class="inner__btn" type="button">Pepsi</button>
+                      <form class="inner__form" action="#">
+                        <label class="inner__label">
+                        <input class="inner__input" type="checkbox">
+                        <span class="inner__checkbox"></span>
+                        <span class="inner__text">Pepsi</span>
+                        <div class="inner__box">
+                        </div>
+                      </label>
+                      </form>
                     </li>
+
                     <li class="inner__item">
-                      <button class="inner__btn" type="button">Sprite</button>
+                      <form class="inner__form" action="#">
+                        <label class="inner__label">
+                        <input class="inner__input" type="checkbox">
+                        <span class="inner__checkbox"></span>
+                        <span class="inner__text">Sprite</span>
+                        <div class="inner__box">
+                        </div>
+                      </label>
+                      </form>
                     </li>
+
                     <li class="inner__item">
-                      <button class="inner__btn" type="button">Fanta</button>
+                      <form class="inner__form" action="#">
+                        <label class="inner__label">
+                        <input class="inner__input" type="checkbox">
+                        <span class="inner__checkbox"></span>
+                        <span class="inner__text">Fanta</span>
+                        <div class="inner__box">
+                        </div>
+                      </label>
+                      </form>
                     </li>
+
                     <li class="inner__item">
-                      <button class="inner__btn" type="button">RedBull</button>
+                      <form class="inner__form" action="#">
+                        <label class="inner__label">
+                        <input class="inner__input" type="checkbox">
+                        <span class="inner__checkbox"></span>
+                        <span class="inner__text">RedBull</span>
+                        <div class="inner__box">
+                        </div>
+                      </label>
+                      </form>
                     </li>
+
                     <li class="inner__item">
-                      <button class="inner__btn" type="button">Dr Pepper</button>
+                      <form class="inner__form" action="#">
+                        <label class="inner__label">
+                        <input class="inner__input" type="checkbox">
+                        <span class="inner__checkbox"></span>
+                        <span class="inner__text">Dr Pepper</span>
+                        <div class="inner__box">
+                        </div>
+                      </label>
+                      </form>
                     </li>
+
                   </ul>
                 </li>
 
@@ -130,59 +206,42 @@
             </ul>
           </aside>
 
-          <h2 class="range__caption">Каталог товаров</h2>
 
-          <div data-ref="container-1">
-            <ul class="filter">
-              <li class="filter__item">
-                <button class="filter__btn" type="button" data-filter="all">
-                  все товары
+          <div class="top-goods range">
+            <div class="shop__filters">
+              <form action="">
+              <select class="shop__sort">
+                <option value="">По названию</option>
+                <option value="">По популярности</option>
+                <option value="">Сначала дешевые</option>
+                <option value="">Сначала дорогие</option>
+                <option value="">По алфавиту</option>
+              </select>
+              
+              <select class="shop__sort shop__sort--long">
+                <option value="">по 12</option>
+                <option value="">по 18</option>
+                <option value="">по 24</option>
+                <option value="">по 30</option>
+                <option value="">по 36</option>
+              </select>
+            </form>
+
+              <div class="shop__buttons">
+                <button class="shop__btn" type="button">
+                  <svg width="47" height="47">
+                      <use href="assets/images/sprite.svg#grid"></use>
+                    </svg>
                 </button>
-              </li>
-
-              <li class="filter__item">
-                <button
-                  class="filter__btn"
-                  type="button"
-                  data-filter=".category-a"
-                >
-                  фрукты
+                <button class="shop__btn" type="button">
+                  <svg width="47" height="47">
+                      <use href="assets/images/sprite.svg#grid-long"></use>
+                    </svg>
                 </button>
-              </li>
-
-              <li class="filter__item">
-                <button
-                  class="filter__btn"
-                  type="button"
-                  data-filter=".category-b"
-                >
-                  овощи
-                </button>
-              </li>
-
-              <li class="filter__item">
-                <button
-                  class="filter__btn"
-                  type="button"
-                  data-filter=".category-c"
-                >
-                  напитки
-                </button>
-              </li>
-
-              <li class="filter__item">
-                <button
-                  class="filter__btn"
-                  type="button"
-                  data-filter=".category-d"
-                >
-                  бакалея
-                </button>
-              </li>
-            </ul>
-
-            <ul class="goods top-goods__item">
-              <li class="goods__card mix category-a">
+              </div>
+          </div>
+            <ul class="goods top-goods__item shop__list">
+              <li class="goods__card shop__card mix category-a">
                 <article>
                   <div class="promo">
                     <span class="promo--new">новинка</span>
@@ -263,7 +322,7 @@
                 </article>
               </li>
 
-              <li class="goods__card mix category-b">
+              <li class="goods__card shop__card mix category-b">
                 <article>
                   <div class="promo"></div>
 
@@ -341,7 +400,7 @@
                 </article>
               </li>
 
-              <li class="goods__card mix category-c">
+              <li class="goods__card shop__card mix category-c">
                 <article>
                   <div class="promo">
                     <span class="promo--hit">хит</span>
@@ -423,7 +482,7 @@
                 </article>
               </li>
 
-              <li class="goods__card mix category-d">
+              <li class="goods__card shop__card mix category-d">
                 <article>
                   <div class="promo"></div>
 
@@ -508,7 +567,7 @@
                 </article>
               </li>
 
-              <li class="goods__card mix category-a">
+              <li class="goods__card shop__card mix category-a">
                 <article>
                   <div class="promo">
                     <span class="promo--hit">хит</span>
@@ -590,7 +649,7 @@
                 </article>
               </li>
 
-              <li class="goods__card mix category-b">
+              <li class="goods__card shop__card mix category-b">
                 <article>
                   <div class="promo">
                     <span class="promo--sale">-30%</span>
@@ -673,7 +732,7 @@
                 </article>
               </li>
 
-              <li class="goods__card mix category-c">
+              <li class="goods__card shop__card mix category-c">
                 <article>
                   <div class="promo">
                     <span class="promo--new">новинка</span>
@@ -755,7 +814,7 @@
                 </article>
               </li>
 
-              <li class="goods__card mix category-d">
+              <li class="goods__card shop__card mix category-d">
                 <article>
                   <div class="promo">
                     <span class="promo--new">новинка</span>
@@ -835,11 +894,12 @@
                 </article>
               </li>
             </ul>
-          </div>
 
           <div class="btn-small range__btn">
             <button class="btn small__btn range__button">Показать еще</button>
           </div>
+          </div>
+        </div>
         </div>
       </section>
 
@@ -891,6 +951,7 @@
     <script src="assets/lib/jquery.rateyo.min.js"></script>
     <script src="assets/lib/swiper-bundle.min.js"></script>
     <script src="assets/lib/ion.rangeSlider.min.js"></script>
+    <script src="assets/lib/jquery.formstyler.min.js"></script>
     <script src="assets/js/app.js"></script>
   </body>
 </html>
