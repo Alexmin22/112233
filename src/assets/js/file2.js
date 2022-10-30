@@ -45,8 +45,7 @@ function plus_modifier_count_product() {
 
 $(function () {
   
-  $(".goods__star").rateYo({
-    rating: 3.6,
+  $(".star").rateYo({
     ratedFill: "#FFB800",
     maxValue: 5,
     numStars: 1,
@@ -142,5 +141,14 @@ var $range = $(".aside__input");
       }, 100);
 
       $('.shop__btn').on('click', function(){
-        $(this).toggleClass('shop__btn--active');
+        $('.shop__btn').removeClass('shop__btn--active');
+        $(this).addClass('shop__btn--active');
+    });
+
+    $('.button__list').on('click', function(){
+      $('.goods__card').addClass('goods__card--list');
+    });
+
+    $('.button__grid').on('click', function(){
+      $('.goods__card').removeClass('goods__card--list');
     });

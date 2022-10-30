@@ -14,6 +14,7 @@
               <li class="breadcrumbs__item">
                 <a class="breadcrumbs__link" href="#">Главная</a>
               </li>
+
               <li class="breadcrumbs__item">
                 <a class="breadcrumbs__link" href="#">Каталог товаров</a>
               </li>
@@ -228,97 +229,114 @@
             </form>
 
               <div class="shop__buttons">
-                <button class="shop__btn" type="button">
+                <button class="shop__btn button__grid shop__btn--active" type="button">
                   <svg width="47" height="47">
                       <use href="assets/images/sprite.svg#grid"></use>
                     </svg>
                 </button>
-                <button class="shop__btn" type="button">
+                <button class="shop__btn button__list" type="button">
                   <svg width="47" height="47">
                       <use href="assets/images/sprite.svg#grid-long"></use>
                     </svg>
                 </button>
               </div>
+          </div>shop__list   shop__card   shop__stock
+
+          <div class="stock-rate">
+            <span class="stock stock--many shop__stock">в наличии</span>
+
+            <div class="rate shop__rate">
+              <span>3.9</span>
+              <div class="star" data-rateyo-rating="3.9"></div>
+            </div>
           </div>
-            <ul class="goods top-goods__item shop__list">
-              <li class="goods__card shop__card mix category-a">
+
+            <ul class="shop__list">
+              <li class="card mix category-a">
                 <article>
                   <div class="promo">
-                    <span class="promo--new">новинка</span>
-                    <span class="promo--sale">-50%</span>
+                    <span class="promo__span promo__span--new">новинка</span>
+                    <span class="promo__span promo__span--sale">-50%</span>
                   </div>
-
-                  <a class="top-goods__link" href="#">
-                    <div class="sr-only">добавить в избранное</div>
+  
+                  <a class="card__fav" href="#">
+                    <span class="sr-only">добавить в избранное</span>
                     <svg class="sprite sprite--fav" width="32" height="29">
                       <use href="assets/images/sprite.svg#fav"></use>
                     </svg>
                   </a>
-
-                  <a class="goods__link-img" href="#">
-                    <div class="sr-only">карточка товара</div>
-                    <div class="top-goods__wrap">
-                      <a class="goods__zoom" href="#">
-                        <div class="sr-only">увеличить картинку товара</div>
-                        <svg class="sprite" width="21" height="20">
-                          <use href="assets/images/sprite.svg#search"></use>
-                        </svg>
-                      </a>
-
+  
+                  <div class="top-goods__wrap">
+                    <a class="card__zoom" href="#">
+                      <div class="sr-only">увеличить картинку товара</div>
+                      <svg class="sprite" width="21" height="20">
+                        <use href="assets/images/sprite.svg#search"></use>
+                      </svg>
+                    </a>
+  
+                    <a class="card__link" href="#">
+                      <span class="sr-only">карточка товара</span>
                       <img
                         class="top-goods__img"
                         src="assets//images/goods/raspberry.png"
                         alt="Ананас"
                         width="300"
-                        ,
                         height="225"
                       />
-                      <div class="goods__info top-goods__info">
-                        <h3 class="goods__title">Ананас, 1 кг</h3>
-
-                        <div class="goods__prices">
-                          <span class="goods__oldprice top-goods__oldprice"
-                            >1999 ₽</span
+                      <div class="card__info">
+                        
+                        <div class="stock-rate">
+                          <span class="stock stock--many shop__stock">в наличии</span>
+                          
+                          <div class="rate shop__rate">
+                            <span>3.9</span>
+                            <div class="star" data-rateyo-rating="3.9"></div>
+                          </div>
+                        </div>
+                        <h3 class="card__title">Ананас, 1 кг</h3>
+                        <div class="card__prices">
+                          <span class="card__oldprice top-goods__oldprice"
+                            >1999<span>₽</span></span
                           >
-                          <div class="top-goods__newprice">99₽</div>
+                          <div class="card__newprice">99<span>₽</span></div>
                         </div>
                       </div>
-                    </div>
-
-                    <form class="counter top-goods__form" action="/">
-                      <div class="counter__amount top-goods__amount">
-                        <button
-                          class="counter__minus"
-                          type="button"
-                          onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();"
-                        >
-                          -
-                        </button>
-                        <input
-                          class="counter__input"
-                          type="number"
-                          name="/"
-                          value="1"
-                          min="1"
-                          max="99"
-                          step="1"
-                        />
-                        <button
-                          class="counter__plus"
-                          type="button"
-                          onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();"
-                        >
-                          +
-                        </button>
-                      </div>
-
-                      <button class="user top-goods__cart" type="button">
-                        <svg class="sprite sprite--user" width="16" height="16">
-                          <use href="assets/images/sprite.svg#cart"></use>
-                        </svg>
+                    </a>
+                  </div>
+  
+                  <form class="counter top-goods__form" action="/">
+                    <div class="counter__amount top-goods__amount">
+                      <button
+                        class="counter__minus"
+                        type="button"
+                        onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();"
+                      >
+                        -
                       </button>
-                    </form>
-                  </a>
+                      <input
+                        class="counter__input"
+                        type="number"
+                        name="/"
+                        value="1"
+                        min="1"
+                        max="99"
+                        step="1"
+                      />
+                      <button
+                        class="counter__plus"
+                        type="button"
+                        onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();"
+                      >
+                        +
+                      </button>
+                    </div>
+  
+                    <button class="user top-goods__cart" type="button">
+                      <svg class="sprite sprite--user" width="16" height="16">
+                        <use href="assets/images/sprite.svg#cart"></use>
+                      </svg>
+                    </button>
+                  </form>
                 </article>
               </li>
 
@@ -351,6 +369,16 @@
                         ,
                         height="225"
                       />
+
+                      <div class="stock-rate">
+                        <span class="stock stock--end shop__stock">нет в наличии</span>
+
+                        <div class="rate shop__rate">
+                          <span>5</span>
+                          <div class="star" data-rateyo-rating="5"></div>
+                        </div>
+                      </div>
+                      
                       <div class="goods__info">
                         <h3 class="goods__title">Лимон, 1 кг</h3>
 
@@ -403,7 +431,7 @@
               <li class="goods__card shop__card mix category-c">
                 <article>
                   <div class="promo">
-                    <span class="promo--hit">хит</span>
+                    <span class="promo__span promo__span--hit">хит</span>
                   </div>
 
                   <a class="top-goods__link" href="#">
@@ -431,6 +459,16 @@
                         ,
                         height="225"
                       />
+
+                      <div class="stock-rate">
+                        <span class="stock stock--out shop__stock">заканчивается</span>
+
+                        <div class="rate shop__rate">
+                          <span>4.1</span>
+                          <div class="star" data-rateyo-rating="4.1"></div>
+                        </div>
+                      </div>
+                      
                       <div class="goods__info">
                         <h3 class="goods__title">
                           Питахайя красная с белой мякотью, 1шт
@@ -511,6 +549,16 @@
                         ,
                         height="225"
                       />
+
+                      <div class="stock-rate">
+                        <span class="stock stock--many shop__stock">в наличии</span>
+
+                        <div class="rate shop__rate">
+                          <span>4.7</span>
+                          <div class="star" data-rateyo-rating="4.7"></div>
+                        </div>
+                      </div>
+                      
                       <div class="goods__info">
                         <h3 class="goods__title">
                           Кетчуп томатный детский органический Bio-Zentrale
@@ -570,7 +618,7 @@
               <li class="goods__card shop__card mix category-a">
                 <article>
                   <div class="promo">
-                    <span class="promo--hit">хит</span>
+                    <span class="promo__span promo__span--hit">хит</span>
                   </div>
 
                   <a class="top-goods__link" href="#">
@@ -598,6 +646,16 @@
                         ,
                         height="225"
                       />
+
+                      <div class="stock-rate">
+                        <span class="stock stock--many shop__stock">в наличии</span>
+
+                        <div class="rate shop__rate">
+                          <span>2.6</span>
+                          <div class="star" data-rateyo-rating="2.6"></div>
+                        </div>
+                      </div>
+                      
                       <div class="goods__info">
                         <h3 class="goods__title">
                           Морковь молодая с бабушкиной грядки, 1кг
@@ -652,7 +710,7 @@
               <li class="goods__card shop__card mix category-b">
                 <article>
                   <div class="promo">
-                    <span class="promo--sale">-30%</span>
+                    <span class="promo__span promo__span--sale">-30%</span>
                   </div>
 
                   <a class="top-goods__link" href="#">
@@ -680,6 +738,16 @@
                         ,
                         height="225"
                       />
+
+                      <div class="stock-rate">
+                        <span class="stock stock--end shop__stock">нет в наличии</span>
+
+                        <div class="rate shop__rate">
+                          <span>3.6</span>
+                          <div class="star" data-rateyo-rating="3.6"></div>
+                        </div>
+                      </div>
+                      
                       <div class="goods__info">
                         <h3 class="goods__title">
                           Напиток сокосодержащий Sanpellegrino Aranciata Orange
@@ -735,7 +803,7 @@
               <li class="goods__card shop__card mix category-c">
                 <article>
                   <div class="promo">
-                    <span class="promo--new">новинка</span>
+                    <span class="promo__span promo__span--new">новинка</span>
                   </div>
 
                   <a class="top-goods__link" href="#">
@@ -763,6 +831,16 @@
                         ,
                         height="225"
                       />
+
+                      <div class="stock-rate">
+                        <span class="stock stock--out shop__stock">заканчивается</span>
+
+                        <div class="rate shop__rate">
+                          <span>4.9</span>
+                          <div class="star" data-rateyo-rating="4.9"></div>
+                        </div>
+                      </div>
+                      
                       <div class="goods__info">
                         <h3 class="goods__title">
                           Кофе с коноплей органический Caffé Salomoni 250г
@@ -817,7 +895,7 @@
               <li class="goods__card shop__card mix category-d">
                 <article>
                   <div class="promo">
-                    <span class="promo--new">новинка</span>
+                    <span class="promo__span promo__span--new">новинка</span>
                   </div>
 
                   <a class="top-goods__link" href="#">
@@ -845,6 +923,16 @@
                         ,
                         height="225"
                       />
+
+                      <div class="stock-rate">
+                        <span class="stock stock--many shop__stock">в наличии</span>
+
+                        <div class="rate shop__rate">
+                          <span>4.6</span>
+                          <div class="star" data-rateyo-rating="4.6"></div>
+                        </div>
+                      </div>
+                      
                       <div class="goods__info">
                         <h3 class="goods__title">Перец оранжевый, 1кг</h3>
 
@@ -896,7 +984,7 @@
             </ul>
 
           <div class="btn-small range__btn">
-            <button class="btn small__btn range__button">Показать еще</button>
+            <button class="btn small__btn range__button" type="button">Показать еще</button>
           </div>
           </div>
         </div>

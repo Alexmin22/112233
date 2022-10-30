@@ -40,77 +40,6 @@
             <a class="header__detail" href="#"> новости </a>
           </li>
         </ul>
-
-
-        <div class="buy">
-          <div class="buy__top">
-            <div class="buy__inner">
-              <h3 class="buy__title">Корзина</h3>
-              <button class="buy__clear">очистить корзину</button>
-            </div>
-            <button class="buy__close">
-              <svg class="sprite" width="24" height="24">
-                <use href="assets/images/sprite.svg#close"></use>
-              </svg>
-            </button>
-          </div>
-          
-          <ul class="buy__list">
-            <li class="buy__item">
-              <div class="buy__remove">
-              <svg class="sprite" width="12" height="12">
-                <use href="assets/images/sprite.svg#remove"></use>
-              </svg>
-            </div>
-            <div class="buy__wrap">
-            <img class="buy__img" src="assets/images/goods/pineapple.jpg" alt="ананас" width="60", height="60">
-            <div class="buy__desc">
-              <h4 class="buy__caption">Ананас, 1 кг</h4>
-              <div class="buy__price">999<span>₽</span></div>
-            </div>
-          </div>
-
-          <div class="buy__numbers">
-            <form class="counter buy__counter" action="/">
-              <div class="counter__amount">
-              <button class="counter__minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
-            <input class="counter__input" type="number" name="/" value="1" min="1" max="99" step="1">
-            <button class="counter__plus" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
-              </div>
-            </form>
-          </div>
-            </li>
-
-            <li class="buy__item">
-              <div class="buy__remove">
-              <svg class="sprite" width="12" height="12">
-                <use href="assets/images/sprite.svg#remove"></use>
-              </svg>
-            </div>
-            <div class="buy__wrap">
-            <img class="buy__img" src="assets/images/goods/pineapple.jpg" alt="ананас" width="60", height="60">
-            <div class="buy__desc">
-              <h4 class="buy__caption">Ананас, 1 кг</h4>
-              <div class="buy__price">999<span>₽</span></div>
-            </div>
-          </div>
-
-          <div class="buy__numbers">
-            <form class="counter buy__counter" action="/">
-              <div class="counter__amount">
-              <button class="counter__minus" type="button" onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">-</button>
-            <input class="counter__input" type="number" name="/" value="1" min="1" max="99" step="1">
-            <button class="counter__plus" type="button" onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
-              </div>
-            </form>
-          </div>
-            </li>
-          </ul>
-          <div class="buy__total"></div>
-          <button class="btn buy__btn" type="submit">Оформить заказ</button>
-        </div>
-
-
       </nav>
     </div>
   </div>
@@ -125,13 +54,14 @@
             <img
               class="logo__img"
               src="assets/images/logo.svg"
-              alt="Freshok"
-              width="200", height="60"
+              alt="Логотип компании Freshok"
+              width="200" height="60"
             />
           </a>
 
       <div class="catalogue">
           <button class="catalogue__btn btn--up" type="button">
+            <span class="sr-only">Нажмите чтобы открыть</span>
             <svg class="sprite" width="26" height="17">
               <use href="assets/images/sprite.svg#lines"></use>
             </svg>
@@ -219,7 +149,7 @@
         <ul class="header__right">
           <li class="header__list">
             <button class="user" type="button">
-              
+              <span class="sr-only">Ваш Аккаунт</span>
               <svg class="sprite sprite--user" width="25" height="32">
                 <use href="assets/images/sprite.svg#user"></use>
               </svg>
@@ -228,7 +158,7 @@
 
           <li class="header__list">
             <button class="user" type="button">
-
+              <span class="sr-only">Избранные товары</span>
               <svg class="sprite sprite--user" width="32" height="29">
                 <use href="assets/images/sprite.svg#heart"></use>
               </svg>
@@ -239,7 +169,7 @@
 
           <li class="header__list">
             <button class="user user-cart" type="button">
-
+              <span class="sr-only">Корзина товаров</span>
               <svg class="sprite sprite--user" width="32" height="31">
                 <use href="assets/images/sprite.svg#cart"></use>
               </svg>

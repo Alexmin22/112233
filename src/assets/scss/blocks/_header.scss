@@ -23,19 +23,7 @@
       margin-right: 40px;
     }
 
-    &:hover {
-      opacity: 0.7;
-    }
-
-    &:focus {
-      background-color: rgba(255, 255, 255, 0.0001);
-      box-shadow: 0 0 0 3px $white-e7;
-      border-radius: 3px;
-    }
-
-    &:active {
-      color: $white-cf;
-    }
+    @include head-hov;
   }
 
   &__link {
@@ -63,19 +51,7 @@
       margin-right: 6px;
     }
 
-    &:hover {
-      opacity: 0.7;
-    }
-
-    &:focus {
-      background-color: rgba(255, 255, 255, 0.0001);
-      box-shadow: 0 0 0 3px $white-e7;
-      border-radius: 3px;
-    }
-
-    &:active {
-      color: $white-cf;
-    }
+    @include head-hov;
   }
 
   &__detail {
@@ -117,22 +93,7 @@
   padding: 9px 12px;
   border-radius: 3px;
   transition: box-shadow 0.3s, background-color 0.3s;
-
-  &:hover {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  }
-
-  &:focus {
-    outline-color: $white-e5;
-  }
-
-  &:active {
-    outline: 0;
-
-    .sprite--user {
-      fill: #b0b0b0;
-    }
-  }
+  @include effects;
 
   &__numb {
     position: absolute;
@@ -142,136 +103,10 @@
     height: 18px;
     border-radius: 50%;
     background-color: $white;
-    color: #cf3e3b;
+    color: $red-3b;
     font-weight: 600;
     font-size: 10px;
     line-height: 18px;
     text-align: center;
-  }
-}
-
-.buy {
-  display: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-  max-width: 475px;
-  width: 100%;
-  background-color: $white;
-  color: $dark;
-  z-index: 50;
-  min-height: 100vh;
-  flex-direction: column;
-  justify-content: space-between;
-  
-  &--active {
-    display: flex;
-  }
-
-  &__top {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 25px 10px;
-    border: 1px solid $gray;
-  }
-
-  &__inner {
-    line-height: 1.2;
-  }
-
-  &__title {
-  font-size: 24px;
-  text-transform: capitalize;
-  font-weight: 400;
-  margin-bottom: 12px;
-}
-
-  &__close 
-  svg {
-    fill: $dark;
-  }
-
-  &__list {
-    background-color: $white-f6;
-    flex-grow: 1;
-  }
-
-  &__item {
-    background-color: $white;
-    margin: 12px;
-    border: 1px solid $gray-c1;
-    border-radius: 3px;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-
-    svg {
-      fill: $gray-c1;
-    }
-  }
-
-  &__remove {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    cursor: pointer;
-  }
-
-  &__wrap {
-    display: flex;
-    align-items: center;
-  }
-
-  &__img {
-    margin: 12px;
-  }
-
-  &__desc {
-    max-width: 170px;
-  }
-  
-  &__caption {
-    text-transform: none;
-    font-weight: 600;
-    margin-bottom: 5px;
-    @include over(2);
-  }
-
-  &__price {
-    display: inline;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 1;
-    color: $gray-50;
-    
-    span {
-      font: inherit;
-      font-size: 14px;
-      color: inherit;
-    }
-  }
-
-  &__numbers {
-    display: flex;
-    align-items: flex-end;
-    margin-bottom: 12px;
-    margin-right: 12px;
-  }
-
-  &__counter {
-    margin-right: 12px;
-  }
-
-  &__btn {
-    width: 100%;
-    border-radius: 0;
-    color: $white;
-    background-color: $green;
-    font-size: 18px;
-    text-transform: none;
-
-    &:hover {
-      background-color: $green-0c;
-    }
   }
 }
