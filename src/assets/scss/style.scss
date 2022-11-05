@@ -7,7 +7,6 @@
 @import "fonts";
 @import "mixins";
 
-
 //@include font("OpenSans", OpenSans-Light, 300); комментирую, т.к эти шрифты пока не применены в макете
 @include font("OpenSans", OpenSans-Regular, 400);
 @include font("OpenSans", OpenSans-SemiBold, 600);
@@ -18,8 +17,8 @@
 
 // Blocks
 @import "blocks/search-row";
-@import "blocks/header";
 @import "blocks/catalogue";
+@import "blocks/header";
 @import "blocks/sprite";
 @import "blocks/main";
 @import "blocks/footer";

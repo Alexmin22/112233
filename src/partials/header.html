@@ -40,6 +40,12 @@
             <a class="header__detail" href="#"> новости </a>
           </li>
         </ul>
+
+        <button class="burger-btn" type="button">
+          <span class="sr-only">кнопка вызова меню навигации по сайту</span>
+          <span class="burger-btn__line"></span>
+        </button>
+
       </nav>
     </div>
   </div>
@@ -51,108 +57,112 @@
 
           <a class="logo" href="#">
 
-            <img
-              class="logo__img"
-              src="assets/images/logo.svg"
-              alt="Логотип компании Freshok"
-              width="200" height="60"
-            />
+            <img class="logo__img" src="assets/images/logo.svg" alt="Логотип компании Freshok" width="200"
+              height="60" />
+            <img class="logo__img-short" src="assets/images/logo-short.png" alt="Логотип компании Freshok" width="37"
+              height="40" />
           </a>
 
-      <div class="catalogue">
-          <button class="catalogue__btn btn--up" type="button">
-            <span class="sr-only">Нажмите чтобы открыть</span>
-            <svg class="sprite" width="26" height="17">
-              <use href="assets/images/sprite.svg#lines"></use>
-            </svg>
-            <span>Каталог продуктов</span>
-            
-            <svg class="sprite sprite--chevron" width="8" height="12">
-              <use href="assets/images/sprite.svg#chevron"></use>
-            </svg>
-          </button>
-              <ul class="catalogue__subnav">
+          <a class="logo-green" href="#">
+            <img class="logo-green__img" src="assets/images/logo--green.png" alt="Логотип компании ФрешОК" width="200"
+              height="60">
+          </a>
 
-                <li class="catalogue__item">
-                  <a class="catalogue__link" href="#">Овощи и фрукты</a>
-                </li>
+          <div class="catalogue">
+            <button class="catalogue__btn btn--up" type="button">
+              <span class="sr-only">Нажмите чтобы открыть</span>
+              <svg class="sprite" width="26" height="17">
+                <use href="assets/images/sprite.svg#lines"></use>
+              </svg>
+              <span>Каталог продуктов</span>
 
-                <li class="catalogue__item">
-                  <a class="catalogue__link" href="#">Бакалея</a>
-                </li>
+              <svg class="sprite sprite--chevron" width="8" height="12">
+                <use href="assets/images/sprite.svg#chevron"></use>
+              </svg>
+            </button>
+            <ul class="catalogue__subnav">
 
-                <li class="catalogue__item">
-                  <a class="catalogue__link" href="#">Молочные продукты</a>
-                </li>
+              <li class="catalogue__item">
+                <a class="catalogue__link" href="#">Овощи и фрукты</a>
+              </li>
 
-                <li class="catalogue__item">
-                  <a class="catalogue__link" href="#">Хлеб</a>
-                </li>
+              <li class="catalogue__item">
+                <a class="catalogue__link" href="#">Бакалея</a>
+              </li>
 
-                <li class="catalogue__item">
-                  <a class="catalogue__link" href="#">Мясо</a>
-                </li>
+              <li class="catalogue__item">
+                <a class="catalogue__link" href="#">Молочные продукты</a>
+              </li>
 
-                <li class="catalogue__item">
-                  <a class="catalogue__link" href="#">Колбаса</a>
-                </li>
+              <li class="catalogue__item">
+                <a class="catalogue__link" href="#">Хлеб</a>
+              </li>
 
-                <li class="catalogue__item">
-                  <a class="catalogue__link" href="#">Рыба</a>
-                </li>
+              <li class="catalogue__item">
+                <a class="catalogue__link" href="#">Мясо</a>
+              </li>
 
-                <li class="catalogue__item">
-                  <a class="catalogue__link" href="#">Алкоголь</a>
-                </li>
-                <li class="catalogue__item">
-                  <a class="catalogue__link" href="#">Напитки</a>
-                </li>
+              <li class="catalogue__item">
+                <a class="catalogue__link" href="#">Колбаса</a>
+              </li>
 
-                <li class="catalogue__item">
-                  <a class="catalogue__link" href="#">Торты</a>
-                </li>
+              <li class="catalogue__item">
+                <a class="catalogue__link" href="#">Рыба</a>
+              </li>
 
-                <li class="catalogue__item">
-                  <a class="catalogue__link" href="#">Мясо</a>
-                </li>
+              <li class="catalogue__item">
+                <a class="catalogue__link" href="#">Алкоголь</a>
+              </li>
+              <li class="catalogue__item">
+                <a class="catalogue__link" href="#">Напитки</a>
+              </li>
 
-                <li class="catalogue__item">
-                  <a class="catalogue__link" href="#">Чай, кофе</a>
-                </li>
-              </ul>
-            </div>
+              <li class="catalogue__item">
+                <a class="catalogue__link" href="#">Торты</a>
+              </li>
 
-          <form class="search-row" action="/" method="post">
+              <li class="catalogue__item">
+                <a class="catalogue__link" href="#">Мясо</a>
+              </li>
 
-          <div class="search-row__decore">
-            <svg class="sprite" width="21" height="20">
-              <use href="assets/images/sprite.svg#search"></use>
-            </svg>
+              <li class="catalogue__item">
+                <a class="catalogue__link" href="#">Чай, кофе</a>
+              </li>
+            </ul>
           </div>
 
+          <form class="search-row" action="/" method="post">
             <label class="search-row__label">
               <span class="sr-only">поисковая строка</span>
 
-              <input
-                class="search-row__input"
-                type="search"
-                name="search"
-                placeholder="Найти в магазине ..."
-                required
-              />
+              <div class="search-row__decore">
+                <svg class="sprite" width="21" height="20">
+                  <use href="assets/images/sprite.svg#search"></use>
+                </svg>
+              </div>
+
+              <input class="search-row__input" type="search" name="search" placeholder="Найти в магазине ..."
+                required />
             </label>
 
             <button class="btn" type="submit">поиск</button>
           </form>
+          <button class="search-btn" type="button">
+            <svg class="sprite" width="24" height="24">
+              <use href="assets/images/sprite.svg#search"></use>
+            </svg>
+          </button>
         </div>
 
         <ul class="header__right">
-          <li class="header__list">
+          <li class="header__list header__list-user">
             <button class="user" type="button">
               <span class="sr-only">Ваш Аккаунт</span>
               <svg class="sprite sprite--user" width="25" height="32">
                 <use href="assets/images/sprite.svg#user"></use>
               </svg>
+              <button class="sign" type="button">Вход</button>
+              <button class="reg" type="button">Регистрация</button>
             </button>
           </li>
 
